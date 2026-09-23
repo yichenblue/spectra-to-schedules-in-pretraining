@@ -1,4 +1,4 @@
-# From Spectra to Joint Schedules: 3+3(+2) Scaling-Law Regimes
+# FROM SPECTRA TO JOINT SCHEDULES IN LLM PRE-TRAINING: 3 + 3(+2) SCALING-LAW REGIMES
 
 ![A forcing--memory surrogate fit for 124M nanoGPT and the 3+3(+2) propagation map](assets/hero_figure.png)
 
