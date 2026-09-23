@@ -2,7 +2,7 @@
 
 ![A forcing--memory surrogate fit for 124M nanoGPT and the 3+3(+2) propagation map](assets/hero_figure.png)
 
-*A forcing--memory surrogate fits 124M nanoGPT loss across schedules and locates its effective response near the $q_{\mathcal K}\approx 1$ boundary of the $3+3(+2)$ propagation map.*
+*A forcing--memory surrogate fits 124M nanoGPT loss across schedules and situates its effective source--capacity condition in the 3+3(+2) propagation map.*
 
 ## Abstract
 
