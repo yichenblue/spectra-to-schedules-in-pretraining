@@ -1,0 +1,107 @@
+{
+  "aggregate_results": {
+    "all_pointwise_stable": true,
+    "all_row_stable": true,
+    "case_count": 24,
+    "maximum_explicit_volterra_modal_relative_linf": 3.0632602397101414e-16,
+    "maximum_gap_relative_l2": 0.02784016453282496,
+    "maximum_row_mass": 0.03122483858017028,
+    "maximum_total_relative_l2": 0.016266837661835155,
+    "median_absolute_gap_slope_difference": 0.006532132184178363,
+    "median_absolute_total_slope_difference": 0.0030458190716412537,
+    "median_gap_relative_l2": 0.017620615782392657,
+    "median_total_relative_l2": 0.00448444543308561,
+    "minimum_gap_fraction_within_three_se": 0.9790419161676647,
+    "minimum_total_fraction_within_three_se": 0.9790419161676647
+  },
+  "artifacts": {
+    "audit_pdf": "experiment0_error_audit.pdf",
+    "audit_png": "experiment0_error_audit.png",
+    "centered_total_pdf": "experiment0_centered_total_risk.pdf",
+    "centered_total_png": "experiment0_centered_total_risk.png",
+    "curves": "curves.csv",
+    "four_panel_schedule_responses_pdf": "experiment0_four_panel_schedule_responses.pdf",
+    "four_panel_schedule_responses_png": "experiment0_four_panel_schedule_responses.png",
+    "gap_pdf": "experiment0_noisy_clean_gap.pdf",
+    "gap_png": "experiment0_noisy_clean_gap.png",
+    "metrics": "metrics.csv"
+  },
+  "claim_scope": "conditional finite-W expected-risk authenticity on the audited finite intrinsic-time windows; not an asymptotic exponent test",
+  "experiment": "experiment_0_finite_rf_sgd_bridge",
+  "gates": {
+    "all_cases_pass": true,
+    "maximum_case_relative_l2": 0.04,
+    "maximum_volterra_modal_error": 1e-12,
+    "minimum_case_fraction_within_three_se": 0.95
+  },
+  "not_claimed": [
+    "fixed-width asymptotic power-law verification",
+    "population-to-empirical random-matrix equivalence",
+    "finite-dataset sample-reuse SGD",
+    "nonlinear feature learning"
+  ],
+  "paper_modified": false,
+  "parameters": {
+    "ambient_to_width_ratio": 2,
+    "eta": 0.1542358173412625,
+    "feature_seeds": [
+      11,
+      23
+    ],
+    "initial_batch": 16,
+    "maximum_intrinsic_time": 60.0,
+    "regimes": [
+      {
+        "alpha": 0.4,
+        "beta": 0.3,
+        "name": "LM",
+        "q_clean": 0.4999999999999999,
+        "q_kernel": 0.75,
+        "schedules": [
+          {
+            "response": "boundary",
+            "theta": 0.25
+          },
+          {
+            "response": "changed",
+            "theta": 0.5
+          },
+          {
+            "response": "preserved",
+            "theta": 0.9
+          }
+        ]
+      },
+      {
+        "alpha": 0.6,
+        "beta": 0.2,
+        "name": "IM",
+        "q_clean": 0.5000000000000001,
+        "q_kernel": 1.1666666666666665,
+        "schedules": [
+          {
+            "response": "boundary",
+            "theta": 0.0
+          },
+          {
+            "response": "changed",
+            "theta": 0.25
+          },
+          {
+            "response": "preserved",
+            "theta": 0.75
+          }
+        ]
+      }
+    ],
+    "sigma2": 25.0,
+    "source_window_fraction": 0.35,
+    "trajectories_per_case": 512,
+    "widths": [
+      256,
+      512
+    ]
+  },
+  "purpose": "same-W validation of the exact conditional finite-random-feature Volterra recurrence against population online Gaussian true SGD",
+  "workflow_promoted": false
+}

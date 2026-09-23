@@ -1,0 +1,57 @@
+{
+  "aggregate_results": {
+    "maximum_de_resolution_relative_l2": 2.9260977591614113e-06,
+    "maximum_de_row_mass": 0.031222347737267595,
+    "maximum_display_aggregate_relative_l2": 0.01696629915970234,
+    "maximum_display_median_per_w_relative_l2": 0.029048765548627738,
+    "maximum_finite_w_row_mass": 0.03140910677441828,
+    "maximum_m_residual": 9.999817425437368e-13
+  },
+  "artifacts": {
+    "curves": "curves.csv",
+    "curves_pdf": "experiment0b_four_panel_finite_w_vs_de.pdf",
+    "curves_png": "experiment0b_four_panel_finite_w_vs_de.png",
+    "errors_pdf": "experiment0b_relative_error_by_width.pdf",
+    "errors_png": "experiment0b_relative_error_by_width.png",
+    "metrics": "metrics.csv",
+    "per_w_metrics": "per_w_metrics.csv",
+    "spectral_diagnostics": "spectral_diagnostics.csv"
+  },
+  "claim_scope": "finite-width numerical validation of the conditional-to-DE bridge on the audited schedules and time windows; not a uniform-in-time random-matrix theorem and not an asymptotic exponent test",
+  "experiment": "experiment_0b_finite_w_de_bridge",
+  "gates": {
+    "bridge_gate_pass": true,
+    "maximum_de_resolution_relative_l2": 0.01,
+    "maximum_display_aggregate_relative_l2": 0.04,
+    "maximum_display_median_per_w_relative_l2": 0.08,
+    "numerical_contract_pass": true
+  },
+  "paper_modified": false,
+  "purpose": "validate the random-feature deterministic-equivalent Volterra against exact conditional finite-W Volterra under the unchanged Experiment 0 schedules",
+  "same_object_contract": {
+    "ambient_to_width_ratio": 2,
+    "de_spectrum": "bundled support-adaptive zero-regularization real-axis resolvent deterministic equivalent, numerically inherited from the audited ws_443 backend",
+    "de_time_dynamics": "same exact discrete varying-batch q_t and injection as finite-W",
+    "eta": 0.1542358173412625,
+    "feature_seeds": [
+      11,
+      23,
+      37,
+      53,
+      71,
+      89,
+      107,
+      131
+    ],
+    "initial_batch": 16,
+    "schedule": "B_t=ceil(B0*(1+eta*t)^theta)",
+    "sigma2": 25.0,
+    "time": "T_t=eta*t",
+    "widths": [
+      128,
+      256,
+      512
+    ]
+  },
+  "workflow_promoted": false
+}
