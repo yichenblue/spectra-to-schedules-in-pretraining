@@ -1,0 +1,30 @@
+name: reproducibility
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install frozen environment
+        run: python -m pip install -r requirements.txt
+      - name: Check release hygiene and figure coverage
+        run: python scripts/verify_release.py
+      - name: Compile source
+        run: python -m compileall -q .
+      - name: Run spectral tests
+        run: python -m unittest discover -s iclr2027/experiments/theorem_validation/tests -v
+      - name: Run random-feature and bridge tests
+        run: python -m unittest discover -s iclr2027/experiments/preserve_change_destroy/tests -v
+      - name: Reproduce paper figures
+        run: python scripts/reproduce_paper_figures.py
+      - name: Check reproduced figure count
+        run: test "$(find reproduced_figures -maxdepth 1 -name '*.pdf' | wc -l | tr -d ' ')" -ge 13

@@ -1,0 +1,19 @@
+{
+  "run_id": "spectral-width-time-v001",
+  "stage": "confirmation_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": true,
+  "eta": 0.05,
+  "batch_size": 16,
+  "width_power": 0.8,
+  "widths": [65536, 262144, 1048576, 4194304],
+  "max_time_over_width_power": 0.0025,
+  "max_missing_tail_fraction": 0.05,
+  "evaluation_points": 121,
+  "primary_width": 4194304,
+  "primary_fit_window": [16.0, 256.0],
+  "sensitivity_fit_windows": [[8.0, 128.0], [32.0, 256.0]],
+  "theory_error_tolerance": 0.08,
+  "pair_difference_tolerance": 0.05,
+  "notes": "Frozen theory-facing extension of the completed pilot. The estimand is the exact learnable forcing, not unseparated minibatch-SGD total risk. Width and time obey T <= 0.0025 d^0.8, giving an analytic omitted-tail fraction at most 0.05. The primary width and all fit windows are fixed before response inspection."
+}

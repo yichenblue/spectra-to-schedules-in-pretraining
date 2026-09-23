@@ -1,0 +1,102 @@
+{
+  "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+  "checkpoint_compatibility": {
+    "accepts_v001_prefix_checkpoint": false,
+    "new_prefix_training_required": true,
+    "prefix_checkpoint_schema": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_prefix_checkpoint_v002",
+    "validation_anchor_reload_policy": {
+      "bitwise_equal_required": false,
+      "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+      "max_abs_tolerance": 0.001,
+      "mean_abs_tolerance": 0.0001
+    }
+  },
+  "derived_from_campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v001",
+  "launch_control": {
+    "cluster_submission_authorized": false
+  },
+  "numerical_runtime": {
+    "amp": true,
+    "autocast_dtype": "bfloat16",
+    "compile": false,
+    "deterministic": false,
+    "device": "cuda",
+    "flash_sdpa_only": true,
+    "gradient_dtype": "float32",
+    "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+    "optimizer_state_dtype": "float32",
+    "optimizer_state_entries": 0,
+    "parameter_dtype": "float32",
+    "required_gpu_name_substring": "H200",
+    "tf32": true,
+    "validation_batch_size": 32,
+    "visible_gpu_count": 1
+  },
+  "primary_prediction_id": "A2_EXTERNAL",
+  "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_campaign_contract_v002",
+  "scientific_contract": {
+    "atomic_batch_size": 4,
+    "canonical_base_learning_rate": 0.005,
+    "canonical_updates": 2441400,
+    "constant_source_updates": 1953120,
+    "executed_tokens_per_trajectory": 2499993600,
+    "initialization_seed": 2026090803,
+    "macro_intrinsic_time": 0.02,
+    "model": {
+      "bias": false,
+      "block_size": 256,
+      "dropout": 0.0,
+      "expected_parameter_count": 123783936,
+      "family": "nanogpt",
+      "n_embd": 768,
+      "n_head": 12,
+      "n_layer": 12,
+      "vocab_size": 50304
+    },
+    "optimizer": {
+      "dampening": 0.0,
+      "foreach": false,
+      "gradient_clip": 0.0,
+      "momentum": 0.0,
+      "name": "sgd",
+      "nesterov": false,
+      "weight_decay": 0.0
+    },
+    "prefix_tape_sha256": "fb278b5f502ea6033daa036186807e95783603655ad1d00f423e57dbdc6f4809",
+    "prefix_tokens": 1999994880,
+    "shapes": {
+      "eight_one_one": {
+        "g_sha256": "1df90e2161746cf4c33a7766ba2105fe4ead4464ce14e78423ec098ecafcfd58",
+        "macro_count": 513685,
+        "terminal_intrinsic_time": 10273.7
+      },
+      "wsd_exp_80_20": {
+        "g_sha256": "5b1fe49dedcff2fc95264853d0723ee79e7ff297a86d4f1ed5f74262fe326edf",
+        "macro_count": 535993,
+        "terminal_intrinsic_time": 10719.86
+      }
+    },
+    "source_manifest_schema": "openwebtext_cooldown_2p5b_source_manifest_v001",
+    "tail_tape_sha256": "2369fe8d7881dba094d03ccce1fb2a30d220647bb1c3ad71a431667f2dddd96b",
+    "tail_tokens": 499998720,
+    "training_tape_offsets_sha256": "970c2fd6f126ceb7c2ce981cb785113ebf271e6316d21dd4bd5abe55d87bedac",
+    "training_tape_seed": 2026090804,
+    "validation_grid": {
+      "alignment": "per_phase_segment_normalized_progress_with_common_T_prefix",
+      "eight_one_one_common_T_grid_is_wsd_prefix": true,
+      "prefix_evaluations": 6000,
+      "prefix_macros_sha256": "52dd2d84940d18ea2159475e446d0306676c18ff42af74e67f13b7b974d7e96d",
+      "reference_campaign_id": "nanogpt300m-e2e-sgd-rpath-refinement-v001",
+      "same_shape_factorizations_share_ticks": true,
+      "tail_evaluations": {
+        "eight_one_one": 4130,
+        "wsd_exp_80_20": 7755
+      },
+      "tail_macros_sha256": {
+        "eight_one_one": "1fe0300ed82fcf9608d44994a1973ac08bd42b59006e6d2788dd837e4d6633b7",
+        "wsd_exp_80_20": "19fb187f7e83311ed5fc05b3ad69c65b0520e44c9dcdeb73e048b19e4d95fafa"
+      }
+    }
+  },
+  "theorem_facing": false
+}

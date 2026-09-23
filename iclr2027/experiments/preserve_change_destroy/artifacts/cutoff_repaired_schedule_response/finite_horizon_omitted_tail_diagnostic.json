@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "bound": 6.635119509220941e-11,
+      "cutoff": 1000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 10000.0,
+      "horizon_name": "nominal_window_upper",
+      "regime": "LM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 6.63511950922094e-10,
+      "cutoff": 1000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 100000.0,
+      "horizon_name": "configured_time_max",
+      "regime": "LM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 2.641488654101825e-13,
+      "cutoff": 100000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 10000.0,
+      "horizon_name": "nominal_window_upper",
+      "regime": "LM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 2.6414886541018246e-12,
+      "cutoff": 100000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 100000.0,
+      "horizon_name": "configured_time_max",
+      "regime": "LM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 2.7909849238970354e-18,
+      "cutoff": 1000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 10000.0,
+      "horizon_name": "nominal_window_upper",
+      "regime": "IM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 2.7909849238970357e-17,
+      "cutoff": 1000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 100000.0,
+      "horizon_name": "configured_time_max",
+      "regime": "IM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 7.010637160891015e-22,
+      "cutoff": 100000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 10000.0,
+      "horizon_name": "nominal_window_upper",
+      "regime": "IM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    },
+    {
+      "bound": 7.010637160891014e-21,
+      "cutoff": 100000000000000,
+      "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+      "horizon": 100000.0,
+      "horizon_name": "configured_time_max",
+      "regime": "IM",
+      "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+    }
+  ],
+  "scope": "bare clean-tail relaxation omitted when the unresolved numerical tail is frozen",
+  "theorem_claim": false,
+  "uniform_coupled_trajectory_bound": false
+}

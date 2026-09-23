@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Training data, checkpoints, and scheduler output are intentionally external.
+data/openwebtext/
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.bin
+**/*.safetensors
+**/*.tar
+**/*.tar.gz
+**/*.out
+**/*.err
+**/logs/
+**/scratch/
+
+# Re-created by scripts/reproduce_paper_figures.py.
+reproduced_figures/*
+!reproduced_figures/.gitkeep
+fixed_noise_validation/artifacts/plots/*
+!fixed_noise_validation/artifacts/plots/.gitkeep
+iclr2027/experiments/theorem_validation/artifacts/spectral_six_construction_paper_style_v002/
+iclr2027/experiments/theorem_validation/artifacts/spectral_rapid_target_triptych_v009/
+data/language_model/nanogpt124m_surrogate/*.pdf
+data/language_model/nanogpt124m_surrogate/*.png
+.mplconfig/

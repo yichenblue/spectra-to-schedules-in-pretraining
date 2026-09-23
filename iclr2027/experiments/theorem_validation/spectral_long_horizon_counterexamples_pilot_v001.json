@@ -1,0 +1,25 @@
+{
+  "run_id": "spectral-long-horizon-counterexamples-pilot-v001",
+  "stage": "exploratory_counterexample_discriminator",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "cases": ["stretched_exponential", "geometric_spectrum"],
+  "width": 2048,
+  "eta": 0.05,
+  "batch_size": 16,
+  "steps": 100000,
+  "seeds": [31601, 31602, 31603, 31604, 31605],
+  "evaluation_points": 2049,
+  "stretched_early_window": [4.0, 64.0],
+  "stretched_late_window": [512.0, 4096.0],
+  "geometric_fit_window": [16.0, 4096.0],
+  "geometric_log_period": 0.35,
+  "stretched_local_half_window_decades": 0.15,
+  "geometric_local_half_window_decades": 0.035,
+  "gates": {
+    "minimum_stretched_exponent_drop": 0.10,
+    "minimum_geometric_local_peak_to_peak": 0.04,
+    "minimum_geometric_periodic_fraction_explained": 0.25
+  },
+  "notes": "Frozen exploratory long-horizon discriminator. T_max=5000 is about 21x the prior literal-SGD horizon. Width 2048 leaves both counterexamples far from finite-spectrum truncation over the fitted windows. Geometric local-slope window width is 0.07 log10 decades, below the predicted 0.35/ln(10)=0.152-decade oscillation period. Every update uses a fresh dense Gaussian minibatch and an explicit full-vector SGD update. No recurrence, spectral binning, or proxy training is permitted."
+}

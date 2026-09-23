@@ -1,0 +1,21 @@
+{
+  "run_id": "spectral-geometric-spacing-sweep-pilot-v001",
+  "stage": "exploratory_counterexample_spacing_sweep",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "spacings": [1.05, 1.4, 1.75],
+  "width": 2048,
+  "eta": 0.05,
+  "batch_size": 16,
+  "steps": 100000,
+  "seeds": [31701, 31702, 31703, 31704, 31705],
+  "evaluation_points": 2049,
+  "fit_intrinsic_time": [16.0, 4096.0],
+  "local_window_fraction_of_period": 0.125,
+  "gates": {
+    "minimum_periodic_fraction_explained": 0.25,
+    "minimum_detected_spacings": 2,
+    "minimum_detecting_seeds_at_largest_spacing": 4
+  },
+  "notes": "Frozen exploratory spacing sweep following the failed known-period gate at a=0.35. The old a=0.35 literal-SGD result is reused as the weak-signal baseline and is not rerun. Only a in lambda_j=exp(-a(j-1)) changes. Each new condition retains d=2048, B=16, eta=0.05, 100000 updates, five new seeds, and the prior fit window. Local-slope full-window width is one quarter of the known period. Every update draws a fresh dense Gaussian minibatch and updates the full vector; no recurrence, spectral binning, or proxy training is allowed. Analytic design-only amplitudes before freezing were approximately 0.0044, 0.031, and 0.098 for the three spacings."
+}

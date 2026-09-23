@@ -1,0 +1,13 @@
+{
+  "run_id": "spectral-loss-sgd-pilot-v001",
+  "stage": "pilot",
+  "primary_prediction_id": "P2_PHASE",
+  "eta": 0.05,
+  "batch_size": 16,
+  "steps": 4096,
+  "widths": [256, 1024],
+  "seeds": [31101, 31102, 31103],
+  "evaluation_points": 121,
+  "fit_intrinsic_time": [2.0, 64.0],
+  "notes": "Secondary theorem-facing spectral-mechanism pilot. Not confirmatory; fit and classification gates must be frozen after inspecting pilot diagnostics."
+}

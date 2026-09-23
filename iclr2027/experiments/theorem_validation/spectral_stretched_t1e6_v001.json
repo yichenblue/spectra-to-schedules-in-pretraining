@@ -1,0 +1,22 @@
+{
+  "run_id": "spectral-stretched-t1e6-v001",
+  "stage": "exploratory_long_horizon_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "case": "stretched_exponential",
+  "width": 2048,
+  "eta": 0.05,
+  "batch_size": 16,
+  "steps": 20000000,
+  "seeds": [31601, 31602, 31603, 31604, 31605],
+  "evaluation_points": 4097,
+  "checkpoint_interval": 1000000,
+  "workers": 5,
+  "fit_windows": {
+    "early": [4.0, 64.0],
+    "previous_late": [512.0, 4096.0],
+    "extended_late": [100000.0, 800000.0]
+  },
+  "local_half_window_decades": 0.15,
+  "notes": "Frozen T_max=1e6 extension of the existing stretched-exponential construction. Uses the same width, eta, batch size, and five seeds as spectral-long-horizon-counterexamples-pilot-v001. Every update is a fresh dense Gaussian minibatch and an explicit full-vector SGD update. Checkpoints preserve both parameter error and RNG state, so resume follows the identical sample tape. No recurrence, spectral binning, or proxy training is permitted."
+}

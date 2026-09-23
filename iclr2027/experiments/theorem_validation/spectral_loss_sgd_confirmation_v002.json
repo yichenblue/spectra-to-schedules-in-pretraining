@@ -1,0 +1,14 @@
+{
+  "run_id": "spectral-loss-sgd-confirmation-v002",
+  "stage": "confirmation",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": true,
+  "eta": 0.05,
+  "batch_size": 16,
+  "steps": 8192,
+  "widths": [1024, 4096],
+  "seeds": [31201, 31202, 31203, 31204, 31205],
+  "evaluation_points": 161,
+  "fit_intrinsic_time": [8.0, 128.0],
+  "notes": "Supersedes v001 after its all-width spectral-gap construction violated the exact Gaussian-SGD mean-square stability condition through the omitted trace(Sigma)/B term. V002 keeps all frozen seeds, widths, fit window, and analysis gates, but uses a width-independent rank-64 gapped covariance padded by inactive modes. Primary evidence is exact population excess risk, local-power slope stability/drift, and width stability; global log-log R2 alone is not a classification gate. Polynomial canonical and sparse-target exponents must agree within 0.08 at width 4096. Spectral-gap exponential R2 must exceed power R2 by at least 0.05. Stretched-exponential and geometric-spectrum cases are diagnosed by structured local-slope drift/oscillation rather than rejected solely by a high power R2. Rapid-target behavior remains exploratory."
+}

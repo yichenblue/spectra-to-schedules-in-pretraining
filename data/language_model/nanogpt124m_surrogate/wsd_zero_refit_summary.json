@@ -1,0 +1,791 @@
+{
+  "WSD_minus_8_1_1_schedule_contrast": {
+    "wsd_exp_80_20__fixed_batch_lr": {
+      "definition": "WSD validation CE minus matched 8-1-1 validation CE",
+      "metrics": {
+        "bias_ce": 0.00033559012343098416,
+        "count": 4130,
+        "mae_ce": 0.0011445725376539803,
+        "max_abs_ce": 0.004718035127889042,
+        "observed_contrast_rms_ce": 0.03183703232742018,
+        "pearson_correlation": 0.9310615634160756,
+        "predicted_contrast_rms_ce": 0.032133218831234794,
+        "relative_rmse_to_observed_contrast_rms": 0.04318010380992059,
+        "rmse_ce": 0.0013747263608978014
+      },
+      "reference_arm": "eight_one_one__fixed_batch_lr"
+    },
+    "wsd_exp_80_20__fixed_lr_batch": {
+      "definition": "WSD validation CE minus matched 8-1-1 validation CE",
+      "metrics": {
+        "bias_ce": 0.0003579843437914916,
+        "count": 4130,
+        "mae_ce": 0.0011705714528766873,
+        "max_abs_ce": 0.004666037991564398,
+        "observed_contrast_rms_ce": 0.03181380337871404,
+        "pearson_correlation": 0.9279824489448594,
+        "predicted_contrast_rms_ce": 0.032133218831234794,
+        "relative_rmse_to_observed_contrast_rms": 0.04411324138984033,
+        "rmse_ce": 0.0014034099879741305
+      },
+      "reference_arm": "eight_one_one__fixed_lr_batch"
+    }
+  },
+  "analysis_id": "nanogpt124m-e2e-sgd-unified-phase-surrogate-v002-wsd-zero-refit",
+  "claim_boundary": {
+    "allowed": [
+      "assess zero-refit transfer of the frozen empirical surrogate to WSD",
+      "compare the two matched WSD factorizations at common intrinsic time",
+      "test the WSD-minus-8-1-1 schedule contrast without parameter refitting",
+      "separate interpolation-range and modest extrapolation-range errors"
+    ],
+    "prohibited": [
+      "reinterpret the frozen q_K as an independent memory-kernel estimate",
+      "claim theorem-facing LM or IM identification",
+      "treat a single shared-seed WSD transfer as independent replication"
+    ]
+  },
+  "classification": "post_hoc_exploratory_single_seed_A2_EXTERNAL_zero_refit_WSD_validation",
+  "factorization_comparison": {
+    "tail_extrapolation_beyond_8_1_1_range": {
+      "observed_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 0.00010281634645472313,
+        "count": 3625,
+        "mae_ce": 0.0001064460941044421,
+        "max_abs_ce": 0.000371547881513834,
+        "rmse_ce": 0.000123569087604801
+      },
+      "predicted_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 0.0,
+        "count": 3625,
+        "mae_ce": 0.0,
+        "max_abs_ce": 0.0,
+        "rmse_ce": 0.0
+      }
+    },
+    "tail_full": {
+      "observed_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 8.557343049074548e-05,
+        "count": 7755,
+        "mae_ce": 9.657469971992945e-05,
+        "max_abs_ce": 0.0008721181657165289,
+        "rmse_ce": 0.00011683149399019298
+      },
+      "predicted_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 0.0,
+        "count": 7755,
+        "mae_ce": 0.0,
+        "max_abs_ce": 0.0,
+        "rmse_ce": 0.0
+      }
+    },
+    "tail_overlap_with_8_1_1_range": {
+      "observed_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 7.0438909820184e-05,
+        "count": 4130,
+        "mae_ce": 8.791034024199764e-05,
+        "max_abs_ce": 0.0008721181657165289,
+        "rmse_ce": 0.00011057996956194339
+      },
+      "predicted_fixed_lr_minus_fixed_batch": {
+        "bias_ce": 0.0,
+        "count": 4130,
+        "mae_ce": 0.0,
+        "max_abs_ce": 0.0,
+        "rmse_ce": 0.0
+      }
+    }
+  },
+  "frozen_fit": {
+    "analysis_id": "nanogpt124m-e2e-sgd-unified-phase-surrogate-v002",
+    "optimizer_calls": 0,
+    "parameter_refit_on_WSD": false,
+    "parameters": {
+      "L_inf": 2.856190721662102,
+      "clean_amplitude": 27.855645587293044,
+      "fit_dependent_noise_amplitude": 5.0336326672792175e-12,
+      "kernel_scale": 18.195512212558224,
+      "noise_floor_amplitude": 121.29830221637582,
+      "q_F": 0.37415173978518584,
+      "q_K": 1.0170727555666113
+    },
+    "parameters_sha256": "586c9ee47d372f7461dc341f874302ea8cda9f29507e7f06090b3c000b51c33c",
+    "phase_classification": {
+      "boundary": 1.0,
+      "decision": "boundary_unresolved",
+      "exploratory_boundary_tolerance": 0.05,
+      "near_optimal_multistart_q_K_max": 1.0170728605303716,
+      "near_optimal_multistart_q_K_min": 1.0170723176733594,
+      "raw_phase_from_point_estimate": "IM"
+    },
+    "summary_path": "SOURCE_SNAPSHOT/summary.json"
+  },
+  "metrics": {
+    "wsd_exp_80_20__fixed_batch_lr": {
+      "tail_extrapolation_beyond_8_1_1_range": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": -0.0005943428332373048,
+          "count": 3625,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0007555074709991118,
+          "rmse_ce": 0.0009323749228776853,
+          "rmse_log_ce": 0.00024649158971667165
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015100643503741776,
+        "recorded_tick_weighted": {
+          "bias_ce": -0.0005886799162286629,
+          "count": 3625,
+          "mae_ce": 0.0007524763494074008,
+          "max_abs_ce": 0.003390739334613979,
+          "rmse_ce": 0.0009294435087039154,
+          "rmse_log_ce": 0.0002457226656822492
+        }
+      },
+      "tail_full": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": -0.00011643591030041463,
+          "count": 7755,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0007950623639902238,
+          "rmse_ce": 0.0009942194777593648,
+          "rmse_log_ce": 0.0002611137492566205
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015103485016578272,
+        "recorded_tick_weighted": {
+          "bias_ce": -0.00012785303697913748,
+          "count": 7755,
+          "mae_ce": 0.000791881526356449,
+          "max_abs_ce": 0.004461368637616925,
+          "rmse_ce": 0.0009903317172951266,
+          "rmse_log_ce": 0.0002601342750666543
+        }
+      },
+      "tail_overlap_with_8_1_1_range": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": 0.0002841588273933635,
+          "count": 4130,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0008282038238405273,
+          "rmse_ce": 0.0010432478866412257,
+          "rmse_log_ce": 0.0002727700407444786
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015106530502422912,
+        "recorded_tick_weighted": {
+          "bias_ce": 0.0002766257613936299,
+          "count": 4130,
+          "mae_ce": 0.0008264683947439308,
+          "max_abs_ce": 0.004461368637616925,
+          "rmse_ce": 0.001040843664972409,
+          "rmse_log_ce": 0.00027215553539658774
+        }
+      }
+    },
+    "wsd_exp_80_20__fixed_lr_batch": {
+      "tail_extrapolation_beyond_8_1_1_range": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": -0.0006974095744006505,
+          "count": 3625,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0008270259682131992,
+          "rmse_ce": 0.0010149657181045021,
+          "rmse_log_ce": 0.0002683017555589647
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015101056859005558,
+        "recorded_tick_weighted": {
+          "bias_ce": -0.000691496262683386,
+          "count": 3625,
+          "mae_ce": 0.0008233398312645019,
+          "max_abs_ce": 0.003695909760759175,
+          "rmse_ce": 0.001011490947963924,
+          "rmse_log_ce": 0.00026738904871085727
+        }
+      },
+      "tail_full": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": -0.00020156375878355317,
+          "count": 7755,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0008268145076569515,
+          "rmse_ce": 0.0010285450495507145,
+          "rmse_log_ce": 0.00027026568493736697
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015103601083430711,
+        "recorded_tick_weighted": {
+          "bias_ce": -0.00021342646746988297,
+          "count": 7755,
+          "mae_ce": 0.0008242711809047755,
+          "max_abs_ce": 0.0045795383383437915,
+          "rmse_ce": 0.0010255371491173144,
+          "rmse_log_ce": 0.0002695174510555108
+        }
+      },
+      "tail_overlap_with_8_1_1_range": {
+        "log_intrinsic_time_balanced": {
+          "bias_ce": 0.00021405672924600886,
+          "count": 4130,
+          "effective_weight_sum": 1.0,
+          "mae_ce": 0.0008266287524677802,
+          "rmse_ce": 0.0010398148972730647,
+          "rmse_log_ce": 0.00027190769526354286
+        },
+        "median_fixed_probe_context_standard_error_ce": 0.015106861848521,
+        "recorded_tick_weighted": {
+          "bias_ce": 0.00020618685157344592,
+          "count": 4130,
+          "mae_ce": 0.0008250886488093741,
+          "max_abs_ce": 0.0045795383383437915,
+          "rmse_ce": 0.001037709172630577,
+          "rmse_log_ce": 0.0002713718448382489
+        }
+      }
+    }
+  },
+  "new_gpu_hours_consumed_by_analysis": 0.0,
+  "schema_version": "nanogpt124m_e2e_sgd_unified_phase_surrogate_wsd_zero_refit_v002",
+  "source_validation": {
+    "complete_campaign": {
+      "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+      "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+      "decision_scope": "single_seed_A2_EXTERNAL_ratio_path_factorization_v002",
+      "gates": {
+        "four_distinct_tails_valid": true,
+        "prefix_valid": true,
+        "same_shape_validation_T_grids": true,
+        "shared_v002_prefix_data_and_numerics_lineage": true,
+        "single_seed_scope_retained": true
+      },
+      "linkage": {
+        "campaign_contract_sha256": true,
+        "data_identity_sha256": true,
+        "numerics_id": true,
+        "prefix_checkpoint_sha256": true,
+        "prefix_model_state_sha256": true,
+        "prefix_validation_anchor_sha256": true,
+        "resource_calibration_sha256": true,
+        "schedule_manifest_sha256": true
+      },
+      "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+      "pairing": {
+        "eight_one_one": true,
+        "wsd_exp_80_20": true
+      },
+      "prefix": {
+        "arm_id": null,
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.843674159841612,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "prefix",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": null,
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 9765.6,
+        "training_rows": 1953120,
+        "validation_rows": 6000
+      },
+      "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_campaign_validation_v002",
+      "status": "passed",
+      "tails": [
+        {
+          "arm_id": "eight_one_one__fixed_batch_lr",
+          "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+          "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+          "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+          "final_validation_cross_entropy": 3.7640718715265393,
+          "gates": {
+            "all_values_finite": true,
+            "artifact_hashes_and_schemas": true,
+            "complete_fixed_probe_grid": true,
+            "complete_per_update_training_CE": true,
+            "exact_H200_BF16_TF32_flash_only_runtime": true,
+            "exact_counts": true,
+            "final_model_and_gradient_contract": true,
+            "prefix_anchor_contract": true,
+            "runtime_within_derived_hard_budget": true,
+            "v002_result_identity_and_campaign_contract": true
+          },
+          "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+          "phase": "tail",
+          "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+          "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+          "prefix_validation_anchor_reload": {
+            "bitwise_equal_required": false,
+            "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+            "max_abs_error": 0.0,
+            "max_abs_tolerance": 0.001,
+            "mean_abs_error": 0.0,
+            "mean_abs_tolerance": 0.0001,
+            "passed": true,
+            "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+            "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+          },
+          "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+          "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+          "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+          "status": "passed",
+          "terminal_intrinsic_time": 10273.7,
+          "training_rows": 488280,
+          "validation_rows": 4130
+        },
+        {
+          "arm_id": "eight_one_one__fixed_lr_batch",
+          "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+          "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+          "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+          "final_validation_cross_entropy": 3.76411506626755,
+          "gates": {
+            "all_values_finite": true,
+            "artifact_hashes_and_schemas": true,
+            "complete_fixed_probe_grid": true,
+            "complete_per_update_training_CE": true,
+            "exact_H200_BF16_TF32_flash_only_runtime": true,
+            "exact_counts": true,
+            "final_model_and_gradient_contract": true,
+            "prefix_anchor_contract": true,
+            "runtime_within_derived_hard_budget": true,
+            "v002_result_identity_and_campaign_contract": true
+          },
+          "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+          "phase": "tail",
+          "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+          "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+          "prefix_validation_anchor_reload": {
+            "bitwise_equal_required": false,
+            "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+            "max_abs_error": 0.0,
+            "max_abs_tolerance": 0.001,
+            "mean_abs_error": 0.0,
+            "mean_abs_tolerance": 0.0001,
+            "passed": true,
+            "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+            "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+          },
+          "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+          "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+          "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+          "status": "passed",
+          "terminal_intrinsic_time": 10273.7,
+          "training_rows": 101620,
+          "validation_rows": 4130
+        },
+        {
+          "arm_id": "wsd_exp_80_20__fixed_batch_lr",
+          "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+          "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+          "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+          "final_validation_cross_entropy": 3.751034037442878,
+          "gates": {
+            "all_values_finite": true,
+            "artifact_hashes_and_schemas": true,
+            "complete_fixed_probe_grid": true,
+            "complete_per_update_training_CE": true,
+            "exact_H200_BF16_TF32_flash_only_runtime": true,
+            "exact_counts": true,
+            "final_model_and_gradient_contract": true,
+            "prefix_anchor_contract": true,
+            "runtime_within_derived_hard_budget": true,
+            "v002_result_identity_and_campaign_contract": true
+          },
+          "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+          "phase": "tail",
+          "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+          "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+          "prefix_validation_anchor_reload": {
+            "bitwise_equal_required": false,
+            "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+            "max_abs_error": 0.0,
+            "max_abs_tolerance": 0.001,
+            "mean_abs_error": 0.0,
+            "mean_abs_tolerance": 0.0001,
+            "passed": true,
+            "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+            "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+          },
+          "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+          "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+          "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+          "status": "passed",
+          "terminal_intrinsic_time": 10719.86,
+          "training_rows": 488280,
+          "validation_rows": 7755
+        },
+        {
+          "arm_id": "wsd_exp_80_20__fixed_lr_batch",
+          "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+          "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+          "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+          "final_validation_cross_entropy": 3.751122043002397,
+          "gates": {
+            "all_values_finite": true,
+            "artifact_hashes_and_schemas": true,
+            "complete_fixed_probe_grid": true,
+            "complete_per_update_training_CE": true,
+            "exact_H200_BF16_TF32_flash_only_runtime": true,
+            "exact_counts": true,
+            "final_model_and_gradient_contract": true,
+            "prefix_anchor_contract": true,
+            "runtime_within_derived_hard_budget": true,
+            "v002_result_identity_and_campaign_contract": true
+          },
+          "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+          "phase": "tail",
+          "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+          "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+          "prefix_validation_anchor_reload": {
+            "bitwise_equal_required": false,
+            "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+            "max_abs_error": 0.0,
+            "max_abs_tolerance": 0.001,
+            "mean_abs_error": 0.0,
+            "mean_abs_tolerance": 0.0001,
+            "passed": true,
+            "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+            "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+          },
+          "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+          "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+          "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+          "status": "passed",
+          "terminal_intrinsic_time": 10719.86,
+          "training_rows": 190852,
+          "validation_rows": 7755
+        }
+      ]
+    },
+    "eight_one_one__fixed_batch_lr": {
+      "prefix": {
+        "arm_id": null,
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.843674159841612,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "prefix",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": null,
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 9765.6,
+        "training_rows": 1953120,
+        "validation_rows": 6000
+      },
+      "tail": {
+        "arm_id": "eight_one_one__fixed_batch_lr",
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.7640718715265393,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "tail",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": {
+          "bitwise_equal_required": false,
+          "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+          "max_abs_error": 0.0,
+          "max_abs_tolerance": 0.001,
+          "mean_abs_error": 0.0,
+          "mean_abs_tolerance": 0.0001,
+          "passed": true,
+          "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+        },
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 10273.7,
+        "training_rows": 488280,
+        "validation_rows": 4130
+      }
+    },
+    "eight_one_one__fixed_lr_batch": {
+      "prefix": {
+        "arm_id": null,
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.843674159841612,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "prefix",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": null,
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 9765.6,
+        "training_rows": 1953120,
+        "validation_rows": 6000
+      },
+      "tail": {
+        "arm_id": "eight_one_one__fixed_lr_batch",
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.76411506626755,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "tail",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": {
+          "bitwise_equal_required": false,
+          "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+          "max_abs_error": 0.0,
+          "max_abs_tolerance": 0.001,
+          "mean_abs_error": 0.0,
+          "mean_abs_tolerance": 0.0001,
+          "passed": true,
+          "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+        },
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 10273.7,
+        "training_rows": 101620,
+        "validation_rows": 4130
+      }
+    },
+    "wsd_exp_80_20__fixed_batch_lr": {
+      "prefix": {
+        "arm_id": null,
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.843674159841612,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "prefix",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": null,
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 9765.6,
+        "training_rows": 1953120,
+        "validation_rows": 6000
+      },
+      "tail": {
+        "arm_id": "wsd_exp_80_20__fixed_batch_lr",
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.751034037442878,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "tail",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": {
+          "bitwise_equal_required": false,
+          "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+          "max_abs_error": 0.0,
+          "max_abs_tolerance": 0.001,
+          "mean_abs_error": 0.0,
+          "mean_abs_tolerance": 0.0001,
+          "passed": true,
+          "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+        },
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 10719.86,
+        "training_rows": 488280,
+        "validation_rows": 7755
+      }
+    },
+    "wsd_exp_80_20__fixed_lr_batch": {
+      "prefix": {
+        "arm_id": null,
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.843674159841612,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "prefix",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": null,
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 9765.6,
+        "training_rows": 1953120,
+        "validation_rows": 6000
+      },
+      "tail": {
+        "arm_id": "wsd_exp_80_20__fixed_lr_batch",
+        "campaign_contract_sha256": "c7498dd633904ce38232094cdae2ff9ba2e8e047fc6c9cfeed89b1edde4f80ef",
+        "campaign_id": "nanogpt124m-e2e-sgd-rpath-factorization-2p5b-v002",
+        "data_identity_sha256": "0fd690015afcc27d8facabe94f850233b83293d9ab201fe89a688b6dd6ecc565",
+        "final_validation_cross_entropy": 3.751122043002397,
+        "gates": {
+          "all_values_finite": true,
+          "artifact_hashes_and_schemas": true,
+          "complete_fixed_probe_grid": true,
+          "complete_per_update_training_CE": true,
+          "exact_H200_BF16_TF32_flash_only_runtime": true,
+          "exact_counts": true,
+          "final_model_and_gradient_contract": true,
+          "prefix_anchor_contract": true,
+          "runtime_within_derived_hard_budget": true,
+          "v002_result_identity_and_campaign_contract": true
+        },
+        "numerics_id": "bf16_autocast_fp32_sgd_tf32_flash_only_v002",
+        "phase": "tail",
+        "prefix_checkpoint_sha256": "4ecedcfc98180df7adf6d898dcf362b5b7e027a3dcfca6ae56a448a8a5eb5e9d",
+        "prefix_model_state_sha256": "19ea86941fe1152baf6ee3b9a6b1318bdf583f68a31d5968e105fa8be6091db8",
+        "prefix_validation_anchor_reload": {
+          "bitwise_equal_required": false,
+          "comparison": "stored_prefix_anchor_vs_reloaded_model_evaluation",
+          "max_abs_error": 0.0,
+          "max_abs_tolerance": 0.001,
+          "mean_abs_error": 0.0,
+          "mean_abs_tolerance": 0.0001,
+          "passed": true,
+          "reloaded_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+          "stored_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242"
+        },
+        "prefix_validation_anchor_sha256": "ec7257238e7cbb26767ec58f6ab8552523b4b476557808e181531983f7c2a242",
+        "resource_calibration_sha256": "c924c0e0902c68fc5ad6d7dbcadafc405d8df690533090ccba910c7385798532",
+        "schedule_manifest_sha256": "a63d8e664e02aeb3b9311347d175dc13b739c680d0b6bbfacfa921764338a7bb",
+        "schema_version": "nanogpt124m_e2e_sgd_rpath_factorization_2p5b_analysis_v002",
+        "status": "passed",
+        "terminal_intrinsic_time": 10719.86,
+        "training_rows": 190852,
+        "validation_rows": 7755
+      }
+    }
+  },
+  "status": "completed",
+  "windows": {
+    "WSD_terminal_intrinsic_time": 10719.86,
+    "frozen_8_1_1_fit_end_intrinsic_time": 10273.7,
+    "prefix_fork_intrinsic_time": 9765.6,
+    "tail_extrapolation_rows": 3625,
+    "tail_overlap_rows": 4130,
+    "tail_rows_including_anchor": 7755
+  }
+}

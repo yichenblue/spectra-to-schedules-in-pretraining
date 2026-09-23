@@ -1,0 +1,98 @@
+{
+  "claim_scope": "finite-width, finite-horizon authenticity bridge for two finite-bulk PLRF subregimes; not a uniform random-matrix theorem, an asymptotic-window validation, or an exponent test",
+  "experiment": "fb_specific_three_layer_bridge",
+  "gates": {
+    "all_de_stable": true,
+    "all_exact_stable": true,
+    "all_gates_pass": true,
+    "de_resolution_tolerance": 0.01,
+    "finite_de_tolerance": 0.04,
+    "m_residual_tolerance": 5e-11,
+    "mass_identity_tolerance": 1e-08,
+    "maximum_de_resolution_relative_l2": 3.141756343699503e-07,
+    "maximum_display_finite_de_relative_l2": 0.007173441299601421,
+    "maximum_eight_seed_finite_de_relative_l2": 0.011392334067112713,
+    "maximum_m_residual": 9.999989004344883e-13,
+    "maximum_mass_identity_error": 1.1368683772161603e-13,
+    "maximum_modal_recurrence_relative_error": 3.6845408614606314e-16,
+    "maximum_true_de_relative_l2": 0.00747724453547189,
+    "maximum_true_finite_relative_l2": 0.005613076354795552,
+    "modal_recurrence_tolerance": 1e-12,
+    "true_de_tolerance": 0.05,
+    "true_finite_tolerance": 0.04
+  },
+  "outputs": {
+    "caption": "SOURCE_SNAPSHOT/caption.txt",
+    "curves": "SOURCE_SNAPSHOT/curves.csv",
+    "metrics": "SOURCE_SNAPSHOT/metrics.csv",
+    "pdf": "SOURCE_SNAPSHOT/fb_volterra_three_layer_bridge.pdf",
+    "png": "SOURCE_SNAPSHOT/fb_volterra_three_layer_bridge.png",
+    "spectral_diagnostics": "SOURCE_SNAPSHOT/spectral_diagnostics.csv"
+  },
+  "parameters": {
+    "ambient_to_width_ratio": 2,
+    "de_comparison_level": 1,
+    "de_final_level": 2,
+    "display_width": 512,
+    "eta_schedule": "eta_m=0.05*B0*m^(2*alpha-1)",
+    "finite_w_seeds": [
+      11,
+      23,
+      37,
+      53,
+      71,
+      89,
+      107,
+      131
+    ],
+    "initial_batch": 16,
+    "initial_density_intervals": 40000,
+    "regimes": [
+      {
+        "alpha": 0.2,
+        "beta": 0.4,
+        "name": "FB1",
+        "p": 0.20000000000000018,
+        "q_clean": 0.5000000000000004
+      },
+      {
+        "alpha": 0.12,
+        "beta": 0.65,
+        "name": "FB2",
+        "p": 0.54,
+        "q_clean": 2.2500000000000004
+      }
+    ],
+    "schedule": "B_t=ceil(B0*(1+T_t)^theta)",
+    "schedules": [
+      {
+        "finite_bulk_response": "linear accumulation",
+        "theta": 0.0
+      },
+      {
+        "finite_bulk_response": "logarithmic accumulation",
+        "theta": 1.0
+      },
+      {
+        "finite_bulk_response": "summable injection",
+        "theta": 2.0
+      }
+    ],
+    "sigma2": 25.0,
+    "trajectories_per_feature_matrix": 256,
+    "triangular_horizon": "T_max(m)=2*m^(2*alpha)/log(m)",
+    "true_sgd_seeds": [
+      11,
+      23,
+      37,
+      53
+    ],
+    "widths": [
+      128,
+      256,
+      512
+    ]
+  },
+  "profile": "full",
+  "status": "PASS"
+}

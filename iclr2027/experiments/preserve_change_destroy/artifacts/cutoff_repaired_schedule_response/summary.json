@@ -1,0 +1,560 @@
+{
+  "artifacts": {
+    "exploratory_horizon_shift": "SOURCE_SNAPSHOT/exploratory_horizon_shift.json",
+    "finite_horizon_omitted_tail_diagnostic": "SOURCE_SNAPSHOT/finite_horizon_omitted_tail_diagnostic.json",
+    "finite_rf_authenticity_pdf": "SOURCE_SNAPSHOT/lm_im_bounded_finite_rf_authenticity.pdf",
+    "finite_rf_authenticity_png": "SOURCE_SNAPSHOT/lm_im_bounded_finite_rf_authenticity.png",
+    "fixed_limit_response_pdf": "SOURCE_SNAPSHOT/lm_im_fixed_limit_schedule_response.pdf",
+    "fixed_limit_response_png": "SOURCE_SNAPSHOT/lm_im_fixed_limit_schedule_response.png",
+    "layer_a_finite_rf_curves": "SOURCE_SNAPSHOT/layer_a_finite_rf_curves.csv",
+    "layer_a_slope_audits": "SOURCE_SNAPSHOT/layer_a_slope_audits.csv",
+    "layer_a_true_sgd_anchor_curves": "SOURCE_SNAPSHOT/layer_a_true_sgd_anchor_curves.csv",
+    "layer_a_true_sgd_anchor_metrics": "SOURCE_SNAPSHOT/layer_a_true_sgd_anchor_metrics.csv",
+    "layer_a_width_drift": "SOURCE_SNAPSHOT/layer_a_width_drift.csv",
+    "layer_b_fixed_limit_curves": "SOURCE_SNAPSHOT/layer_b_fixed_limit_curves.csv",
+    "layer_b_response_summary": "SOURCE_SNAPSHOT/layer_b_response_summary.csv",
+    "layer_b_separate_resolution": "SOURCE_SNAPSHOT/layer_b_separate_resolution.csv",
+    "layer_b_slope_audits": "SOURCE_SNAPSHOT/layer_b_slope_audits.csv"
+  },
+  "created_at": "2026-08-21T16:36:36.407741+00:00",
+  "elapsed_seconds": 27.252794792002533,
+  "experiment": "repaired_two_layer_schedule_response",
+  "exploratory_horizon_shift": {
+    "changes_main_gate": false,
+    "interpretation": "The LM one-decade shift moves both slopes toward the targets before cutoff instability; successive IM shifts turn the small negative slope positive and approach the 0.05 target. None of these points is promoted.",
+    "rows": [
+      {
+        "exponent_residual": -0.10374600350225682,
+        "fitted_exponent": 0.5962539964977431,
+        "local_slope_median": 0.601385267959491,
+        "local_slope_spread": 0.09351329119106755,
+        "lower_time": 40.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.7,
+        "r_squared": 0.9994021442818807,
+        "regime": "LM",
+        "span_decades": 2.3923380549156383,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.95,
+        "upper_time": 10000.0,
+        "window": "preregistered_nominal"
+      },
+      {
+        "exponent_residual": -0.07016299267283743,
+        "fitted_exponent": 0.6298370073271625,
+        "local_slope_median": 0.6316106907087796,
+        "local_slope_spread": 0.04529611155545632,
+        "lower_time": 400.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.7,
+        "r_squared": 0.9998696931234394,
+        "regime": "LM",
+        "span_decades": 2.392338054915638,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.95,
+        "upper_time": 100000.0,
+        "window": "one_decade_shift"
+      },
+      {
+        "exponent_residual": -0.051672924224886674,
+        "fitted_exponent": 0.6483270757751133,
+        "local_slope_median": 0.6490406348501979,
+        "local_slope_spread": 0.028168183648294542,
+        "lower_time": 4000.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.7,
+        "r_squared": 0.9999522597289401,
+        "regime": "LM",
+        "span_decades": 2.392338054915638,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.95,
+        "upper_time": 1000000.0,
+        "window": "two_decade_shift_cutoff_diagnostic"
+      },
+      {
+        "exponent_residual": -0.09451668333417429,
+        "fitted_exponent": 0.6554833166658257,
+        "local_slope_median": 0.6604768931510226,
+        "local_slope_spread": 0.08723593313854394,
+        "lower_time": 40.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.75,
+        "r_squared": 0.9995723060156497,
+        "regime": "LM",
+        "span_decades": 2.3923380549156383,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 1.05,
+        "upper_time": 10000.0,
+        "window": "preregistered_nominal"
+      },
+      {
+        "exponent_residual": -0.06376213219571414,
+        "fitted_exponent": 0.6862378678042859,
+        "local_slope_median": 0.6878723654979483,
+        "local_slope_spread": 0.04081291159235745,
+        "lower_time": 400.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.75,
+        "r_squared": 0.9999111961145669,
+        "regime": "LM",
+        "span_decades": 2.392338054915638,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 1.05,
+        "upper_time": 100000.0,
+        "window": "one_decade_shift"
+      },
+      {
+        "exponent_residual": -0.04716330520440759,
+        "fitted_exponent": 0.7028366947955924,
+        "local_slope_median": 0.7034406179496705,
+        "local_slope_spread": 0.025382828585000627,
+        "lower_time": 4000.0,
+        "observable": "noise_gap",
+        "point_count": 363,
+        "predicted_exponent": 0.75,
+        "r_squared": 0.9999671715319016,
+        "regime": "LM",
+        "span_decades": 2.392338054915638,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 1.05,
+        "upper_time": 1000000.0,
+        "window": "two_decade_shift_cutoff_diagnostic"
+      },
+      {
+        "exponent_residual": -0.058212457063695267,
+        "fitted_exponent": -0.008212457063695262,
+        "local_slope_median": -0.005373698654196244,
+        "local_slope_spread": 0.06074042065103934,
+        "lower_time": 40.0,
+        "observable": "noise_gap",
+        "point_count": 441,
+        "predicted_exponent": 0.05,
+        "r_squared": 0.4222002460975127,
+        "regime": "IM",
+        "span_decades": 2.3909266591739122,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.05,
+        "upper_time": 10000.0,
+        "window": "preregistered_nominal"
+      },
+      {
+        "exponent_residual": -0.03503689333461634,
+        "fitted_exponent": 0.014963106665383662,
+        "local_slope_median": 0.016234913966482332,
+        "local_slope_spread": 0.0323677935977729,
+        "lower_time": 400.0,
+        "observable": "noise_gap",
+        "point_count": 441,
+        "predicted_exponent": 0.05,
+        "r_squared": 0.8935462708000185,
+        "regime": "IM",
+        "span_decades": 2.3909266591739122,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.05,
+        "upper_time": 100000.0,
+        "window": "one_decade_shift"
+      },
+      {
+        "exponent_residual": -0.022019734639400858,
+        "fitted_exponent": 0.027980265360599145,
+        "local_slope_median": 0.02865331686448535,
+        "local_slope_spread": 0.019060811761553026,
+        "lower_time": 4000.0,
+        "observable": "noise_gap",
+        "point_count": 441,
+        "predicted_exponent": 0.05,
+        "r_squared": 0.9882355038630538,
+        "regime": "IM",
+        "span_decades": 2.3909266591739122,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.05,
+        "upper_time": 1000000.0,
+        "window": "two_decade_shift"
+      },
+      {
+        "exponent_residual": -0.014131341619925589,
+        "fitted_exponent": 0.035868658380074414,
+        "local_slope_median": 0.03625949347794147,
+        "local_slope_spread": 0.011830833839326763,
+        "lower_time": 40000.0,
+        "observable": "noise_gap",
+        "point_count": 442,
+        "predicted_exponent": 0.05,
+        "r_squared": 0.9972064312052811,
+        "regime": "IM",
+        "span_decades": 2.396360583399307,
+        "status": "POST_HOC_EXPLORATORY_NOT_GATE_BEARING",
+        "theta": 0.05,
+        "upper_time": 10000000.0,
+        "window": "three_decade_shift"
+      }
+    ],
+    "scope": "post-hoc diagnosis of two near-log LM misses and one very-small-exponent IM direction miss"
+  },
+  "failed_or_inconclusive_routes": [
+    "Layer A fixed-width slopes are descriptive and never theorem-certifying.",
+    "LM below-boundary and boundary points are censored.",
+    "LM critical and logarithmic/ceiling points are censored.",
+    "IM boundary, critical, and ceiling points are censored.",
+    "Any open point missing window stability or resolution remains inconclusive.",
+    "The paper experiment directory is outside this task's allowed write paths."
+  ],
+  "finite_horizon_omitted_tail_diagnostic": {
+    "rows": [
+      {
+        "bound": 6.635119509220941e-11,
+        "cutoff": 1000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 10000.0,
+        "horizon_name": "nominal_window_upper",
+        "regime": "LM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 6.63511950922094e-10,
+        "cutoff": 1000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 100000.0,
+        "horizon_name": "configured_time_max",
+        "regime": "LM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 2.641488654101825e-13,
+        "cutoff": 100000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 10000.0,
+        "horizon_name": "nominal_window_upper",
+        "regime": "LM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 2.6414886541018246e-12,
+        "cutoff": 100000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 100000.0,
+        "horizon_name": "configured_time_max",
+        "regime": "LM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 2.7909849238970354e-18,
+        "cutoff": 1000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 10000.0,
+        "horizon_name": "nominal_window_upper",
+        "regime": "IM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 2.7909849238970357e-17,
+        "cutoff": 1000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 100000.0,
+        "horizon_name": "configured_time_max",
+        "regime": "IM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 7.010637160891015e-22,
+        "cutoff": 100000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 10000.0,
+        "horizon_name": "nominal_window_upper",
+        "regime": "IM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      },
+      {
+        "bound": 7.010637160891014e-21,
+        "cutoff": 100000000000000,
+        "formula": "2*T*zeta(4*alpha+2*beta,N+1)",
+        "horizon": 100000.0,
+        "horizon_name": "configured_time_max",
+        "regime": "IM",
+        "status": "DIAGNOSTIC_NOT_UNIFORM_THEOREM"
+      }
+    ],
+    "scope": "bare clean-tail relaxation omitted when the unresolved numerical tail is frozen",
+    "theorem_claim": false,
+    "uniform_coupled_trajectory_bound": false
+  },
+  "gates": {
+    "layer_A_stability_pass": true,
+    "layer_A_true_SGD_anchor_pass": true,
+    "layer_B_cutoff_convergence_pass": true,
+    "layer_B_no_open_formula_contradiction": true,
+    "layer_B_separate_resolution_pass": true,
+    "layer_B_stability_pass": true,
+    "numerical_integrity_pass": true,
+    "raw_object_validation_pass": true
+  },
+  "layer_A": {
+    "all_pointwise_and_row_stable": true,
+    "feature_seeds": [
+      11,
+      23
+    ],
+    "finite_widths": [
+      128,
+      256
+    ],
+    "fixed_width_terminal_tail_used_for_theorem": false,
+    "maximum_pointwise_product": 0.2005447506823313,
+    "maximum_row_mass": 0.03265086916883494,
+    "row_mass_cap": 0.8,
+    "scope": "bounded finite-RF authenticity only",
+    "true_SGD": {
+      "all_anchors_pass": true,
+      "anchor_count": 10,
+      "maximum_relative_l2_error": 0.027770404080542314,
+      "minimum_fraction_within_three_standard_errors": 0.9897435897435898,
+      "scope": "same-W finite-window true-SGD authenticity, not an exponent fit"
+    }
+  },
+  "layer_B": {
+    "all_base_trajectories_row_stable": true,
+    "all_separate_resolution_rows_pass": true,
+    "censored_row_count": 14,
+    "claim_eligible_row_count": 88,
+    "contradiction_row_count": 0,
+    "contradiction_rule": {
+      "moderate_formula_tolerance_or_small_exponent_direction_misses": "INCONCLUSIVE",
+      "nonpositive_fit_against_prediction_at_least_threshold": 0.2,
+      "stable_absolute_residual_threshold": 0.2
+    },
+    "contradictions": [],
+    "cutoff_convergence_gate": {
+      "all_rows_pass": true,
+      "curve_tolerance": 0.002,
+      "identical_relative_bin_width": true,
+      "identical_time_grid": true,
+      "primary_cutoff": 1000000000000,
+      "refined_cutoff": 100000000000000,
+      "row_count": 106,
+      "slope_tolerance": 0.002,
+      "status": "PASS",
+      "worst_curve_relative_l2": 1.4057897857746142e-05,
+      "worst_exponent_drift": 1.3700644231229298e-05
+    },
+    "inconclusive_open_row_count": 4,
+    "maximum_row_mass": 0.06558415098828592,
+    "non_cutoff_resolution_gate": {
+      "curve_tolerance": 0.02,
+      "row_count": 318,
+      "slope_tolerance": 0.025,
+      "status": "PASS",
+      "worst_curve_relative_l2": 0.0015980969167324929,
+      "worst_exponent_drift": 0.0005838886274717181
+    },
+    "physical_infinite_spectrum_floor": 0.0,
+    "primary_spectral_cutoff": 1000000000000,
+    "refined_spectral_cutoff": 100000000000000,
+    "scope": "one fixed infinite power spectrum approximated by numerical quadrature",
+    "spectral_cutoff_role": "numerical truncation only, never a model width",
+    "time_range": [
+      0.25,
+      100000.0
+    ],
+    "unresolved_tail_treatment": "included in clean-centered observables and frozen only as a finite-horizon numerical approximation",
+    "windows": {
+      "nominal": [
+        40.0,
+        10000.0
+      ],
+      "relaxed": [
+        25.0,
+        15849.0
+      ],
+      "strict": [
+        63.0,
+        6310.0
+      ]
+    }
+  },
+  "objective_scope": {
+    "fixed_width_terminal_tail_used_for_target_fit": false,
+    "new_code_location": "SOURCE_SNAPSHOT/src",
+    "paper_experiment_directory_write_permitted": false,
+    "paper_source_modified": false,
+    "population_to_empirical_claim_made": false,
+    "unbounded_common_eta_width_sequence_claim_made": false
+  },
+  "parameters": {
+    "common_eta_layer_a": {
+      "audited_eta_cap": 0.1542358173412625,
+      "certified_eta": 0.24583807492946677,
+      "eta": 0.1542358173412625,
+      "limiting_constraint": "audited_experiment_0_eta",
+      "maximum_lambda": 1.2237624430943297,
+      "maximum_trace": 13.016698088439352,
+      "pointwise_margin": 1.7994552493176688,
+      "row_mass_certificate": 0.06973086262898748
+    },
+    "fixed_spectrum_quadrature": {
+      "base_points_per_decade": 80,
+      "base_relative_bin_width": 0.01,
+      "cutoff_only_refined_spectral_cutoff": 100000000000000,
+      "physical_infinite_spectrum_floor": 0.0,
+      "primary_spectral_cutoff": 1000000000000,
+      "refined_points_per_decade": 160,
+      "refined_relative_bin_width": 0.005,
+      "time_range": [
+        0.25,
+        100000.0
+      ]
+    },
+    "initial_batch": 16,
+    "regimes": {
+      "IM": {
+        "alpha": 0.6,
+        "beta": 0.2,
+        "memory_ceiling": 1.1666666666666667,
+        "name": "IM",
+        "preservation_threshold": 0.5,
+        "q_clean": 0.5,
+        "q_kernel": 1.1666666666666667,
+        "stability_boundary": 0.0
+      },
+      "LM": {
+        "alpha": 0.4,
+        "beta": 0.3,
+        "memory_ceiling": 1.0,
+        "name": "LM",
+        "preservation_threshold": 0.75,
+        "q_clean": 0.5,
+        "q_kernel": 0.75,
+        "stability_boundary": 0.25
+      }
+    },
+    "schedule": "B_t=ceil(16*(1+T_t)^theta)",
+    "sigma2": 25.0,
+    "theta_grids": {
+      "IM": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.1166666666666667,
+        1.15,
+        1.1666666666666667,
+        1.2,
+        1.2166666666666668,
+        1.25,
+        1.3,
+        1.35
+      ],
+      "LM": [
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.25
+      ]
+    }
+  },
+  "provenance": {
+    "audited_bridge_reuse": {
+      "experiment_0": {
+        "claim_scope": "conditional finite-W expected-risk authenticity on the audited finite intrinsic-time windows; not an asymptotic exponent test",
+        "numerical_contract_status": "PASS",
+        "path": "SOURCE_SNAPSHOT/summary.json",
+        "sha256": "95bf7ab0d2c614eb920485d042b37f4ac02170e768e7ba6a8644b59af5a58c71"
+      },
+      "experiment_0b": {
+        "claim_scope": "finite-width numerical validation of the conditional-to-DE bridge on the audited schedules and time windows; not a uniform-in-time random-matrix theorem and not an asymptotic exponent test",
+        "numerical_contract_status": "PASS",
+        "path": "SOURCE_SNAPSHOT/summary.json",
+        "sha256": "8ba92e0b3c664d5e24b5d1962ae77af9c9cedb5aa0332446056e24bd2556c760"
+      },
+      "experiment_0c": {
+        "claim_scope": "finite-width numerical three-layer bridge on the audited schedules and time windows; not a uniform random-matrix theorem",
+        "numerical_contract_status": "PASS",
+        "path": "SOURCE_SNAPSHOT/summary.json",
+        "sha256": "4aa00e1348fb9b6949f2059257c69730aa65bacf640e548073bee18b61c377a3"
+      }
+    },
+    "regenerated_artifact_sha256": {
+      "audited_bridge_reuse.json": "95e1d5d5ea86dd909bb43bd13df9cbf3630a52c61e2c90727d419ab2b891998a",
+      "exploratory_horizon_shift.json": "e2f0793ab999dd3828f68affde241a72be893481960e700a1b8c967240c8f0a8",
+      "finite_horizon_omitted_tail_diagnostic.json": "0d78f0a8a7613492497173f4ef9c7134cba9173870f18184d4145ac2ef4f765d",
+      "layer_a_finite_rf_curves.csv": "afc46ac8688fbd401a3641b702fabca9daf92a9edc0a5b1691b8b01c87bcacb2",
+      "layer_a_slope_audits.csv": "51e925f094bbd8a50e38f56223b214ab5d22315f60a99ea91fa1e4f5eb02468a",
+      "layer_a_true_sgd_anchor_curves.csv": "c1a34c5d0ffafd366a629683346c875b8a34c18f4faf62301fca4d02c7a0c369",
+      "layer_a_true_sgd_anchor_metrics.csv": "5b5fe58d196e8fea11f1ad7976bf7decc4cc853245a03838d24c592ab8e950a4",
+      "layer_a_width_drift.csv": "c44f4c107d5792ce15ab82337447304bb832d7de986565881f336124239f3330",
+      "layer_b_fixed_limit_curves.csv": "bb4055f4bf00d1735b3a214c4c39ee8e38eea81ed7e363a77b5179b70bf0748a",
+      "layer_b_response_summary.csv": "fed6f52255c340f497b13802a5753bb8e834fbed7286496255be7fdca46e2913",
+      "layer_b_separate_resolution.csv": "509db11e4ffd99a200657d0f8fcac9d4c7fa2d316f516ed8dfb9a429d40a0361",
+      "layer_b_slope_audits.csv": "a61a852b41236d4a0367aa272360983611406a4f3f8246fc891153c6fad027bb",
+      "lm_im_bounded_finite_rf_authenticity.pdf": "1ab97a276de2398fbaa87487c76b75cdd3c16c6dc566281b7482edb99e3da84e",
+      "lm_im_bounded_finite_rf_authenticity.png": "748cf3ef1e21780f55211ab7c6a5654ca2c99774431b18415fa2c9347905234d",
+      "lm_im_fixed_limit_schedule_response.pdf": "320c2b9913c5b56580ca3d283f4733d6069d7a412c7b758c610c9cfffa99edc3",
+      "lm_im_fixed_limit_schedule_response.png": "d371b6e6d3331f7413d69b39835d8c6beb38b071e5bca06d5f5f797b1555869a",
+      "raw_validation_metrics.json": "f2194ceb7f4ba12116b2ecf28fda27567e04f5a591e119c73d7e6d258b38b758"
+    },
+    "repaired_runner_sha256": "a868e555d4ff660c243c9f6a4bc1e5fe256f4628f59247b58a4b267ddc244348",
+    "vendored_core_sha256": "aae253dd554a3ca471edd1329edbbfdb0bbc176600db5a01312adea0680183b9"
+  },
+  "raw_validation": {
+    "maximum_decomposition_identity_error": 1.6132928326584306e-16,
+    "maximum_modal_vs_dense_covariance_total_error": 4.440892098500626e-16,
+    "maximum_modal_vs_explicit_volterra_gap_error": 2.8275992658421956e-16,
+    "maximum_parseval_residual": 0.0,
+    "maximum_small_gram_vs_dense_spectral_error": 1.3322676295501878e-15,
+    "pass": true
+  },
+  "schema_version": 1,
+  "source_contract": {
+    "ambient_to_width_ratio": 2,
+    "beta_estimator_used": false,
+    "beta_star_substitution_used": false,
+    "fixed_dataset_used": false,
+    "hermite_guard_expected": 22.0,
+    "hermite_guard_value": 22.0,
+    "initial_batch": 16,
+    "nonlinear_feature_expansion_used": false,
+    "sigma2": 25.0
+  },
+  "status": "PASS_WITH_CENSORED_AND_INCONCLUSIVE_POINTS"
+}

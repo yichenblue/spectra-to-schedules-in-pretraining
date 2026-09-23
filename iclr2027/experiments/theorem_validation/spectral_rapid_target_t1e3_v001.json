@@ -1,0 +1,18 @@
+{
+  "run_id": "spectral-rapid-target-t1e3-v001",
+  "stage": "exploratory_long_horizon",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "width": 16384,
+  "steps": 20000,
+  "eta": 0.05,
+  "batch_sizes": [16],
+  "seeds": [31501, 31502, 31503],
+  "evaluation_points": 321,
+  "tail_fit_window": [100.0, 800.0],
+  "forcing_transform_fit_window": [4.0, 64.0],
+  "predicted_forcing_transform_exponent": 0.5555555555555556,
+  "forcing_transform_tolerance": 0.08,
+  "spectral_band_edges": [0, 4, 16, 64, 256, 1024, 4096, 16384],
+  "notes": "Long-horizon extension of the literal sampled-minibatch rapid-target pilot. Only B=16 is retained for the Section 3 main-text figure. Width, eta, seeds, construction, and fresh dense Gaussian minibatch semantics are unchanged; the horizon alone is extended to intrinsic time T=1000. The 100--800 exponent window is exploratory and is not selected for agreement with theory."
+}

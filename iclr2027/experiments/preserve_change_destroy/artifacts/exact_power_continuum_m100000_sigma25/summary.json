@@ -1,0 +1,935 @@
+{
+  "artifacts": {
+    "compact_paper_figure_curves": "SOURCE_SNAPSHOT/joint_schedule_triptych_curves.csv",
+    "compact_paper_figure_metrics": "SOURCE_SNAPSHOT/joint_schedule_triptych_metrics.csv",
+    "compact_paper_figure_pdf": "SOURCE_SNAPSHOT/preserve_change_destroy_continuum_diagnostic.pdf",
+    "compact_paper_figure_png": "SOURCE_SNAPSHOT/preserve_change_destroy_continuum_diagnostic.png",
+    "curves": "SOURCE_SNAPSHOT/curves.csv",
+    "figure_pdf": "SOURCE_SNAPSHOT/exact_power_continuum_m100000.pdf",
+    "figure_png": "SOURCE_SNAPSHOT/exact_power_continuum_m100000.png",
+    "full_loss_display_curves": "SOURCE_SNAPSHOT/full_loss_display_curves.csv",
+    "full_loss_figure_pdf": "SOURCE_SNAPSHOT/full_loss_curves_m100000.pdf",
+    "full_loss_figure_png": "SOURCE_SNAPSHOT/full_loss_curves_m100000.png",
+    "full_loss_fit_metrics": "SOURCE_SNAPSHOT/full_loss_fit_metrics.csv",
+    "panel_a_display_curves": "SOURCE_SNAPSHOT/panel_a_display_curves.csv",
+    "phase_metrics": "SOURCE_SNAPSHOT/phase_metrics.csv",
+    "resolution_checks": "SOURCE_SNAPSHOT/resolution_checks.csv"
+  },
+  "compact_paper_figure_diagnostic": {
+    "component_envelope_semantics": "normalized finite-width component diagnostic; not the direct floor-centered total-loss slope",
+    "display_window": [
+      0.1,
+      630.9573444801937
+    ],
+    "figure_size_inches": [
+      12.4,
+      4.15
+    ],
+    "fit_window": [
+      17.78279410038923,
+      316.22776601683796
+    ],
+    "generated": true,
+    "guide_semantics": "asymptotic predictions with one common visual offset; not fits",
+    "guide_window": [
+      80.0,
+      160.0
+    ],
+    "layout": "wide single-row: panels a/b/c side by side; legend below",
+    "metrics": {
+      "0.0": {
+        "effective_width": 100000,
+        "floor_centered_total_local_median": -0.24608217757709294,
+        "floor_centered_total_local_variation": 0.35051046014097337,
+        "formal_direct_response_exponent": -0.25,
+        "group": "control",
+        "included_in_frozen_primary_or_sentinel_gate": false,
+        "measured_component_envelope_exponent": -0.27502140484378024,
+        "measured_floor_centered_total_exponent": -0.23744567768061434,
+        "measured_noise_gap_exponent": -0.32569342293371245,
+        "noise_gap_local_median": -0.3250016652250965,
+        "noise_gap_local_variation": 0.15700385564694463,
+        "role": "finite-horizon instability control",
+        "route": "refined",
+        "sigma2": 25.0,
+        "theory_component_envelope_exponent": null,
+        "theory_floor_centered_total_exponent": null,
+        "theory_noise_gap_exponent": null,
+        "theta": 0.0
+      },
+      "0.25": {
+        "effective_width": 100000,
+        "floor_centered_total_local_median": 0.07589221134952291,
+        "floor_centered_total_local_variation": 0.809495432564849,
+        "formal_direct_response_exponent": null,
+        "group": "primary",
+        "included_in_frozen_primary_or_sentinel_gate": true,
+        "measured_component_envelope_exponent": -0.0,
+        "measured_floor_centered_total_exponent": 0.0805329997311505,
+        "measured_noise_gap_exponent": -0.05067201808993216,
+        "noise_gap_local_median": -0.05018240406891316,
+        "noise_gap_local_variation": 1.3006117709423461,
+        "role": "destroy boundary",
+        "route": "refined",
+        "sigma2": 25.0,
+        "theory_component_envelope_exponent": 0.0,
+        "theory_floor_centered_total_exponent": 0.0,
+        "theory_noise_gap_exponent": 0.0,
+        "theta": 0.25
+      },
+      "0.5": {
+        "effective_width": 100000,
+        "floor_centered_total_local_median": 0.34835894506061976,
+        "floor_centered_total_local_variation": 0.035967135848694695,
+        "formal_direct_response_exponent": null,
+        "group": "primary",
+        "included_in_frozen_primary_or_sentinel_gate": true,
+        "measured_component_envelope_exponent": 0.2546163349410903,
+        "measured_floor_centered_total_exponent": 0.35021850889970246,
+        "measured_noise_gap_exponent": 0.20394431685115816,
+        "noise_gap_local_median": 0.20454093310365443,
+        "noise_gap_local_variation": 0.3686430037890286,
+        "role": "change",
+        "route": "refined",
+        "sigma2": 25.0,
+        "theory_component_envelope_exponent": 0.25,
+        "theory_floor_centered_total_exponent": 0.25,
+        "theory_noise_gap_exponent": 0.25,
+        "theta": 0.5
+      },
+      "2.0": {
+        "effective_width": 100000,
+        "floor_centered_total_local_median": 0.599500706277479,
+        "floor_centered_total_local_variation": 0.13959620269546757,
+        "formal_direct_response_exponent": null,
+        "group": "display-only",
+        "included_in_frozen_primary_or_sentinel_gate": false,
+        "measured_component_envelope_exponent": 0.500242930354084,
+        "measured_floor_centered_total_exponent": 0.6061774099878183,
+        "measured_noise_gap_exponent": 0.8214677257538919,
+        "noise_gap_local_median": 0.8201061329151138,
+        "noise_gap_local_variation": 0.03715388543790336,
+        "role": "preserve",
+        "route": "refined",
+        "sigma2": 25.0,
+        "theory_component_envelope_exponent": 0.4999999999999999,
+        "theory_floor_centered_total_exponent": 0.4999999999999999,
+        "theory_noise_gap_exponent": 0.75,
+        "theta": 2.0
+      }
+    },
+    "status": "DESCRIPTIVE_ONLY",
+    "theta_values": [
+      0.0,
+      0.25,
+      0.5,
+      2.0
+    ],
+    "theta_zero_semantics": "no stable full-loss exponent; q=-0.25 is drawn only as the formal direct-response growth prediction in the noisy-clean gap"
+  },
+  "destroy_control": {
+    "included_in_overall_gate": false,
+    "interpretation": "below-boundary instability check; the direct response grows and no admissible infinite-horizon decay exponent is claimed",
+    "metrics": {
+      "group": "control",
+      "included_in_frozen_numerical_contract": true,
+      "included_in_overall_observable_gate": false,
+      "included_in_primary_phase_gate": false,
+      "included_in_sentinel_phase_gate": false,
+      "measured_absolute_gap_exponent": -0.32569342293371245,
+      "measured_phase_envelope_exponent": -0.27502140484378024,
+      "measured_relative_gap_exponent": -0.27502140484378024,
+      "phase": "below-boundary instability",
+      "phase_envelope_error": null,
+      "phase_envelope_local_median": -0.2748192611561834,
+      "phase_envelope_local_variation": 0.05182064326307084,
+      "phase_exponent_gate": false,
+      "phase_local_gate": true,
+      "raw_total_exponent": -0.23442156632498978,
+      "relative_gap_error": null,
+      "relative_gap_exponent_gate": false,
+      "relative_gap_local_median": -0.2748192611561834,
+      "relative_gap_local_variation": 0.05182064326307084,
+      "theory_gap_exponent": null,
+      "theory_phase_exponent": null,
+      "theta": 0.0
+    },
+    "status": "DESCRIPTIVE_CONTROL"
+  },
+  "destroy_control_theta_0.00": {
+    "group": "control",
+    "included_in_frozen_numerical_contract": true,
+    "included_in_overall_observable_gate": false,
+    "included_in_primary_phase_gate": false,
+    "included_in_sentinel_phase_gate": false,
+    "measured_absolute_gap_exponent": -0.32569342293371245,
+    "measured_phase_envelope_exponent": -0.27502140484378024,
+    "measured_relative_gap_exponent": -0.27502140484378024,
+    "phase": "below-boundary instability",
+    "phase_envelope_error": null,
+    "phase_envelope_local_median": -0.2748192611561834,
+    "phase_envelope_local_variation": 0.05182064326307084,
+    "phase_exponent_gate": false,
+    "phase_local_gate": true,
+    "raw_total_exponent": -0.23442156632498978,
+    "relative_gap_error": null,
+    "relative_gap_exponent_gate": false,
+    "relative_gap_local_median": -0.2748192611561834,
+    "relative_gap_local_variation": 0.05182064326307084,
+    "theory_gap_exponent": null,
+    "theory_phase_exponent": null,
+    "theta": 0.0
+  },
+  "display_only_numerical_pass": true,
+  "elapsed_seconds": 4.78353149999748,
+  "experiment": "exact_power_continuum_experiment_one_m100000_sigma2_25",
+  "full_loss_diagnostic": {
+    "below_boundary_direct_response_guide": {
+      "formal_direct_gap_exponent": -0.25,
+      "growth_power": 0.25,
+      "included_in_phase_gate": false,
+      "reason": "formal pre-feedback growth reference only; no stable full-loss exponent is claimed below the destroy boundary",
+      "theta": 0.0,
+      "window": [
+        80.0,
+        160.0
+      ]
+    },
+    "claim_limit": "direct full-loss slopes do not replace the normalized component/phase-envelope observable gate",
+    "destroy_boundary_guide": {
+      "reason": "q=0 applies at the stability boundary, not below it",
+      "theory_phase_exponent": 0.0,
+      "theta": 0.25
+    },
+    "display_only_tail": [
+      316.22776601683796,
+      630.9573444801937
+    ],
+    "display_window": [
+      0.1,
+      630.9573444801937
+    ],
+    "fit_window": [
+      17.78279410038923,
+      316.22776601683796
+    ],
+    "guide_windows": {
+      "0.25": [
+        80.0,
+        160.0
+      ],
+      "0.5": [
+        80.0,
+        160.0
+      ],
+      "1.5": [
+        80.0,
+        160.0
+      ]
+    },
+    "metrics": {
+      "0.0": {
+        "floor_centered_total_exponent_error": null,
+        "measured_floor_centered_total_exponent": -0.23744567768061434,
+        "measured_raw_total_exponent": -0.23442156632498978,
+        "raw_total_exponent_error": null,
+        "theory_phase_exponent": null,
+        "theta": 0.0
+      },
+      "0.25": {
+        "floor_centered_total_exponent_error": 0.0805329997311505,
+        "measured_floor_centered_total_exponent": 0.0805329997311505,
+        "measured_raw_total_exponent": 0.07816110421571336,
+        "raw_total_exponent_error": 0.07816110421571336,
+        "theory_phase_exponent": 0.0,
+        "theta": 0.25
+      },
+      "0.5": {
+        "floor_centered_total_exponent_error": 0.10021850889970246,
+        "measured_floor_centered_total_exponent": 0.35021850889970246,
+        "measured_raw_total_exponent": 0.3299163546489235,
+        "raw_total_exponent_error": 0.0799163546489235,
+        "theory_phase_exponent": 0.25,
+        "theta": 0.5
+      },
+      "1.5": {
+        "floor_centered_total_exponent_error": 0.11381849143642697,
+        "measured_floor_centered_total_exponent": 0.6138184914364269,
+        "measured_raw_total_exponent": 0.5326171252156513,
+        "raw_total_exponent_error": 0.03261712521565141,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 1.5
+      },
+      "2.5": {
+        "floor_centered_total_exponent_error": 0.10194032812194564,
+        "measured_floor_centered_total_exponent": 0.6019403281219455,
+        "measured_raw_total_exponent": 0.5182189671548959,
+        "raw_total_exponent_error": 0.018218967154896015,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 2.5
+      }
+    },
+    "raw_panel_role": "authentic full population loss; asymptotic phase guides are intentionally not applied before subtracting the fixed floor",
+    "shared_preserve_guide": {
+      "reason": "both sentinels have the same joint-limit phase exponent",
+      "theory_phase_exponent": 0.4999999999999999,
+      "theta_values": [
+        1.5,
+        2.5
+      ]
+    },
+    "status": "DESCRIPTIVE_ONLY",
+    "theory_guide_semantics": "short admissible asymptotic reference segments are not finite-window fits; the separately styled theta=0 segment is only a formal direct-response growth continuation",
+    "theory_target": "R_sigma(T)-R_floor"
+  },
+  "not_claimed": [
+    "raw-total phase-law validation",
+    "absolute-gap convergence at theta=0.90",
+    "memory-ceiling gap exponent from the theta=1.50/2.50 sentinels",
+    "finite-random-feature deterministic equivalence",
+    "independent discovery of the destroy boundary",
+    "paper promotion while the external computation gate is blocked",
+    "memory-ceiling absolute-gap convergence from the theta=2 display-only trajectory"
+  ],
+  "not_run": [
+    "integer batch schedule",
+    "discrete exact recursion",
+    "true Gaussian SGD"
+  ],
+  "numerical_contract_pass": true,
+  "object_scope": "analytic-spectrum continuum proxy at effective width m=100000",
+  "overall_observable_gate_pass": true,
+  "primary_phase_gate_pass": true,
+  "protocol": {
+    "alpha": 0.4,
+    "beta": 0.3,
+    "compact_paper_thetas": [
+      0.0,
+      0.25,
+      0.5,
+      2.0
+    ],
+    "control_thetas": [
+      0.0
+    ],
+    "display_horizon_exponent": 0.56,
+    "display_only_thetas": [
+      2.0
+    ],
+    "effective_width": 100000,
+    "fit_points": 41,
+    "fit_weighting": "41 equal-weight log-uniform points",
+    "fit_window": [
+      17.78279410038923,
+      316.22776601683796
+    ],
+    "fit_window_width_exponents": [
+      0.25,
+      0.5
+    ],
+    "inverse_ratio_cell_rule": "exact integral per cell; cell-mean times exact constant modal survival",
+    "local_slope_half_window_decades": 0.15,
+    "panel_a_display_only_tail": [
+      316.22776601683796,
+      630.9573444801937
+    ],
+    "panel_a_display_window": [
+      0.1,
+      630.9573444801937
+    ],
+    "panel_a_normalization_time": 0.1,
+    "panel_a_theory_guide_window": [
+      17.78279410038923,
+      316.22776601683796
+    ],
+    "panel_a_theory_guides_start": 17.78279410038923,
+    "primary_thetas": [
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.9,
+      1.0,
+      1.1
+    ],
+    "ratio_path": "r_theta(T)=128*max(1,T)^theta",
+    "reference_theta": 0.25,
+    "representative_thetas": [
+      0.0,
+      0.25,
+      0.5,
+      1.5,
+      2.5
+    ],
+    "route_specs": {
+      "coarse": [
+        0.002,
+        36
+      ],
+      "refined": [
+        0.001,
+        72
+      ],
+      "spectrum_refined": [
+        0.001,
+        36
+      ],
+      "time_refined": [
+        0.002,
+        72
+      ]
+    },
+    "sentinel_thetas": [
+      1.5,
+      2.5
+    ],
+    "sigma2": 25.0,
+    "stress_theta": 0.9
+  },
+  "quadrature": {
+    "coarse": {
+      "approximation_floor": 0.024999950000116702,
+      "mode_count": 3438,
+      "spectral_relative_bin_width": 0.002,
+      "teacher_energy_relative_error": 1.1253339549090228e-09,
+      "time_grid_size": 211,
+      "time_points_per_decade": 36
+    },
+    "refined": {
+      "approximation_floor": 0.024999950000116702,
+      "mode_count": 6178,
+      "spectral_relative_bin_width": 0.001,
+      "teacher_energy_relative_error": 2.7518912077505884e-10,
+      "time_grid_size": 420,
+      "time_points_per_decade": 72
+    },
+    "spectrum_refined": {
+      "approximation_floor": 0.024999950000116702,
+      "mode_count": 6178,
+      "spectral_relative_bin_width": 0.001,
+      "teacher_energy_relative_error": 2.7518912077505884e-10,
+      "time_grid_size": 211,
+      "time_points_per_decade": 36
+    },
+    "time_refined": {
+      "approximation_floor": 0.024999950000116702,
+      "mode_count": 3438,
+      "spectral_relative_bin_width": 0.002,
+      "teacher_energy_relative_error": 1.1253339549090228e-09,
+      "time_grid_size": 420,
+      "time_points_per_decade": 72
+    }
+  },
+  "refined_results": {
+    "centered_clean_exponent": 0.5855712597395635,
+    "clean_proxy_gate_pass": true,
+    "metrics": {
+      "0.0": {
+        "group": "control",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": false,
+        "included_in_primary_phase_gate": false,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": -0.32569342293371245,
+        "measured_phase_envelope_exponent": -0.27502140484378024,
+        "measured_relative_gap_exponent": -0.27502140484378024,
+        "phase": "below-boundary instability",
+        "phase_envelope_error": null,
+        "phase_envelope_local_median": -0.2748192611561834,
+        "phase_envelope_local_variation": 0.05182064326307084,
+        "phase_exponent_gate": false,
+        "phase_local_gate": true,
+        "raw_total_exponent": -0.23442156632498978,
+        "relative_gap_error": null,
+        "relative_gap_exponent_gate": false,
+        "relative_gap_local_median": -0.2748192611561834,
+        "relative_gap_local_variation": 0.05182064326307084,
+        "theory_gap_exponent": null,
+        "theory_phase_exponent": null,
+        "theta": 0.0
+      },
+      "0.25": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": -0.05067201808993216,
+        "measured_phase_envelope_exponent": -0.0,
+        "measured_relative_gap_exponent": -0.0,
+        "phase": "destroy boundary",
+        "phase_envelope_error": 0.0,
+        "phase_envelope_local_median": 0.0,
+        "phase_envelope_local_variation": 0.0,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.07816110421571336,
+        "relative_gap_error": 0.0,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.0,
+        "relative_gap_local_variation": 0.0,
+        "theory_gap_exponent": 0.0,
+        "theory_phase_exponent": 0.0,
+        "theta": 0.25
+      },
+      "0.35": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.053090487215234926,
+        "measured_phase_envelope_exponent": 0.10376250530516713,
+        "measured_relative_gap_exponent": 0.10376250530516713,
+        "phase": "change",
+        "phase_envelope_error": 0.0037625053051670437,
+        "phase_envelope_local_median": 0.1038294069704544,
+        "phase_envelope_local_variation": 0.03003705238633298,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.18881163454896646,
+        "relative_gap_error": 0.0037625053051670437,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.1038294069704544,
+        "relative_gap_local_variation": 0.03003705238633298,
+        "theory_gap_exponent": 0.10000000000000009,
+        "theory_phase_exponent": 0.10000000000000009,
+        "theta": 0.35
+      },
+      "0.5": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.20394431685115816,
+        "measured_phase_envelope_exponent": 0.2546163349410903,
+        "measured_relative_gap_exponent": 0.2546163349410903,
+        "phase": "change",
+        "phase_envelope_error": 0.0046163349410903165,
+        "phase_envelope_local_median": 0.2547233371725677,
+        "phase_envelope_local_variation": 0.03978731852143562,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.3299163546489235,
+        "relative_gap_error": 0.0046163349410903165,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.2547233371725677,
+        "relative_gap_local_variation": 0.03978731852143562,
+        "theory_gap_exponent": 0.25,
+        "theory_phase_exponent": 0.25,
+        "theta": 0.5
+      },
+      "0.65": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.34741361066621945,
+        "measured_phase_envelope_exponent": 0.3980856287561516,
+        "measured_relative_gap_exponent": 0.3980856287561516,
+        "phase": "change",
+        "phase_envelope_error": 0.0019143712438483007,
+        "phase_envelope_local_median": 0.39806035440544285,
+        "phase_envelope_local_variation": 0.051962536313680446,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.43205474187494575,
+        "relative_gap_error": 0.0019143712438483007,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.39806035440544285,
+        "relative_gap_local_variation": 0.051962536313680446,
+        "theory_gap_exponent": 0.3999999999999999,
+        "theory_phase_exponent": 0.3999999999999999,
+        "theta": 0.65
+      },
+      "0.75": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.43698930973801775,
+        "measured_phase_envelope_exponent": 0.48766132782794996,
+        "measured_relative_gap_exponent": 0.48766132782794996,
+        "phase": "critical",
+        "phase_envelope_error": 0.012338672172049925,
+        "phase_envelope_local_median": 0.4874056681615221,
+        "phase_envelope_local_variation": 0.0592327063921565,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.477352880554203,
+        "relative_gap_error": 0.012338672172050036,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.4874056681615221,
+        "relative_gap_local_variation": 0.0592327063921565,
+        "theory_gap_exponent": 0.5,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 0.75
+      },
+      "0.9": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.5580163403594578,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.6086883584493897,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.5168718356739177,
+        "relative_gap_error": 0.04131164155061018,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.6078754085851311,
+        "relative_gap_local_variation": 0.06527739429586511,
+        "theory_gap_exponent": 0.6499999999999999,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 0.9
+      },
+      "1.0": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.6271489576927712,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.6778209757827034,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.5295981878830223,
+        "relative_gap_error": 0.0721790242172966,
+        "relative_gap_exponent_gate": false,
+        "relative_gap_local_median": 0.6765521751046507,
+        "relative_gap_local_variation": 0.06410296185664494,
+        "theory_gap_exponent": 0.75,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 1.0
+      },
+      "1.1": {
+        "group": "primary",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": true,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.6853004020350375,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.7359724201249698,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.5354955398837603,
+        "relative_gap_error": 0.014027579875030227,
+        "relative_gap_exponent_gate": true,
+        "relative_gap_local_median": 0.7342393682501849,
+        "relative_gap_local_variation": 0.05781829266330763,
+        "theory_gap_exponent": 0.75,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 1.1
+      },
+      "1.5": {
+        "group": "sentinel",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": false,
+        "included_in_sentinel_phase_gate": true,
+        "measured_absolute_gap_exponent": 0.807612207470697,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.8582842255606287,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.5326171252156513,
+        "relative_gap_error": 0.10828422556062867,
+        "relative_gap_exponent_gate": false,
+        "relative_gap_local_median": 0.8584319324691035,
+        "relative_gap_local_variation": 0.015523839285764812,
+        "theory_gap_exponent": 0.75,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 1.5
+      },
+      "2.0": {
+        "group": "display-only",
+        "included_in_frozen_numerical_contract": false,
+        "included_in_overall_observable_gate": false,
+        "included_in_primary_phase_gate": false,
+        "included_in_sentinel_phase_gate": false,
+        "measured_absolute_gap_exponent": 0.8214677257538919,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.872139743843824,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.522985889685292,
+        "relative_gap_error": 0.12213974384382398,
+        "relative_gap_exponent_gate": false,
+        "relative_gap_local_median": 0.8666844947517875,
+        "relative_gap_local_variation": 0.054944386335599574,
+        "theory_gap_exponent": 0.75,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 2.0
+      },
+      "2.5": {
+        "group": "sentinel",
+        "included_in_frozen_numerical_contract": true,
+        "included_in_overall_observable_gate": true,
+        "included_in_primary_phase_gate": false,
+        "included_in_sentinel_phase_gate": true,
+        "measured_absolute_gap_exponent": 0.8111024507749957,
+        "measured_phase_envelope_exponent": 0.500242930354084,
+        "measured_relative_gap_exponent": 0.8617744688649275,
+        "phase": "preserve",
+        "phase_envelope_error": 0.00024293035408406993,
+        "phase_envelope_local_median": 0.5007910021749986,
+        "phase_envelope_local_variation": 0.008290515196333252,
+        "phase_exponent_gate": true,
+        "phase_local_gate": true,
+        "raw_total_exponent": 0.5182189671548959,
+        "relative_gap_error": 0.11177446886492748,
+        "relative_gap_exponent_gate": false,
+        "relative_gap_local_median": 0.8579034139423286,
+        "relative_gap_local_variation": 0.05372164300385923,
+        "theory_gap_exponent": 0.75,
+        "theory_phase_exponent": 0.4999999999999999,
+        "theta": 2.5
+      }
+    },
+    "primary_gap_exponent_pass_count": 7,
+    "primary_phase_exponent_pass_count": 8,
+    "primary_phase_local_pass_count": 8,
+    "primary_phase_mae": 0.0029200843405509744,
+    "primary_phase_mae_gate_pass": true,
+    "primary_phase_max_error": 0.012338672172049925,
+    "tail_completed_clean_exponent": 0.5002429303540841,
+    "tail_completed_clean_local_variation": 0.008290515196333583
+  },
+  "resolution": {
+    "all_checks_pass": true,
+    "curve_tolerance": 0.003,
+    "display_only": {
+      "all_checks_pass": true,
+      "evaluated": true,
+      "included_in_numerical_contract": false,
+      "maximum_curve_error": 0.0008674643073438322,
+      "maximum_slope_error": 0.0003099305647353834
+    },
+    "maximum_curve_error": 0.0018748505710220913,
+    "maximum_slope_error": 0.00038545489860214444,
+    "slope_tolerance": 0.002
+  },
+  "schedule_diagnostics": {
+    "annotated_window_10_100": {
+      "pure_real_exponent": 0.9,
+      "shifted_ceiling_exponent": 0.8672080907236307,
+      "shifted_real_exponent": 0.8688117696705286
+    },
+    "main_window": {
+      "pure_real_exponent": 0.9,
+      "shifted_ceiling_exponent": 0.8848048333336503,
+      "shifted_real_exponent": 0.8855197091686129
+    }
+  },
+  "sentinel_phase_gate_pass": true,
+  "stability": {
+    "all_trajectories_pass": true,
+    "cell_mass_conservation_tolerance": 1e-12,
+    "cell_mass_errors": {
+      "coarse": 4.21659205195296e-16,
+      "refined": 4.21659205195296e-16,
+      "spectrum_refined": 4.21659205195296e-16,
+      "time_refined": 4.21659205195296e-16
+    },
+    "display_only": {
+      "all_trajectories_pass": true,
+      "cell_mass_errors": {
+        "coarse": 0.0,
+        "refined": 1.1111035148235383e-16,
+        "spectrum_refined": 0.0,
+        "time_refined": 1.1111035148235383e-16
+      },
+      "evaluated": true,
+      "included_in_numerical_contract": false,
+      "maximum_cell_coupling": 0.0010686005185580956,
+      "maximum_row_mass": 0.011936111411626808
+    },
+    "maximum_cell_coupling": 0.05331149980668859,
+    "maximum_cell_mass_conservation_error": 4.21659205195296e-16,
+    "maximum_row_mass": 0.11731650272439445,
+    "row_mass_cap": 0.2
+  },
+  "status": "PILOT_UNPROMOTED",
+  "stress_test_theta_0.90": {
+    "clean_local_maximum": 0.5013905496400838,
+    "clean_local_minimum": 0.4958285483000922,
+    "gap_exponent_improvement": 0.02075788553994662,
+    "new_gap_gate": true,
+    "new_gap_local_maximum": 0.6350580807333206,
+    "new_gap_local_minimum": 0.5866990415940643,
+    "new_phase_envelope_exponent": 0.500242930354084,
+    "new_phase_gate": true,
+    "new_relative_gap_error": 0.04131164155061018,
+    "new_relative_gap_exponent": 0.6086883584493897,
+    "old_relative_gap_exponent": 0.5879304729094431,
+    "old_source": "SOURCE_SNAPSHOT/curves.csv",
+    "preserve_order_gate": true,
+    "preserve_order_margin": 0.08530849195398049,
+    "theory_gap_exponent": 0.6499999999999999,
+    "theta": 0.9
+  },
+  "strong_preserve_sentinel_theta_1.50": {
+    "group": "sentinel",
+    "included_in_frozen_numerical_contract": true,
+    "included_in_overall_observable_gate": true,
+    "included_in_primary_phase_gate": false,
+    "included_in_sentinel_phase_gate": true,
+    "measured_absolute_gap_exponent": 0.807612207470697,
+    "measured_phase_envelope_exponent": 0.500242930354084,
+    "measured_relative_gap_exponent": 0.8582842255606287,
+    "phase": "preserve",
+    "phase_envelope_error": 0.00024293035408406993,
+    "phase_envelope_local_median": 0.5007910021749986,
+    "phase_envelope_local_variation": 0.008290515196333252,
+    "phase_exponent_gate": true,
+    "phase_local_gate": true,
+    "raw_total_exponent": 0.5326171252156513,
+    "relative_gap_error": 0.10828422556062867,
+    "relative_gap_exponent_gate": false,
+    "relative_gap_local_median": 0.8584319324691035,
+    "relative_gap_local_variation": 0.015523839285764812,
+    "theory_gap_exponent": 0.75,
+    "theory_phase_exponent": 0.4999999999999999,
+    "theta": 1.5
+  },
+  "strong_preserve_sentinel_theta_2.50": {
+    "group": "sentinel",
+    "included_in_frozen_numerical_contract": true,
+    "included_in_overall_observable_gate": true,
+    "included_in_primary_phase_gate": false,
+    "included_in_sentinel_phase_gate": true,
+    "measured_absolute_gap_exponent": 0.8111024507749957,
+    "measured_phase_envelope_exponent": 0.500242930354084,
+    "measured_relative_gap_exponent": 0.8617744688649275,
+    "phase": "preserve",
+    "phase_envelope_error": 0.00024293035408406993,
+    "phase_envelope_local_median": 0.5007910021749986,
+    "phase_envelope_local_variation": 0.008290515196333252,
+    "phase_exponent_gate": true,
+    "phase_local_gate": true,
+    "raw_total_exponent": 0.5182189671548959,
+    "relative_gap_error": 0.11177446886492748,
+    "relative_gap_exponent_gate": false,
+    "relative_gap_local_median": 0.8579034139423286,
+    "relative_gap_local_variation": 0.05372164300385923,
+    "theory_gap_exponent": 0.75,
+    "theory_phase_exponent": 0.4999999999999999,
+    "theta": 2.5
+  },
+  "strong_preserve_sentinels": {
+    "1.5": {
+      "group": "sentinel",
+      "included_in_frozen_numerical_contract": true,
+      "included_in_overall_observable_gate": true,
+      "included_in_primary_phase_gate": false,
+      "included_in_sentinel_phase_gate": true,
+      "measured_absolute_gap_exponent": 0.807612207470697,
+      "measured_phase_envelope_exponent": 0.500242930354084,
+      "measured_relative_gap_exponent": 0.8582842255606287,
+      "phase": "preserve",
+      "phase_envelope_error": 0.00024293035408406993,
+      "phase_envelope_local_median": 0.5007910021749986,
+      "phase_envelope_local_variation": 0.008290515196333252,
+      "phase_exponent_gate": true,
+      "phase_local_gate": true,
+      "raw_total_exponent": 0.5326171252156513,
+      "relative_gap_error": 0.10828422556062867,
+      "relative_gap_exponent_gate": false,
+      "relative_gap_local_median": 0.8584319324691035,
+      "relative_gap_local_variation": 0.015523839285764812,
+      "theory_gap_exponent": 0.75,
+      "theory_phase_exponent": 0.4999999999999999,
+      "theta": 1.5
+    },
+    "2.5": {
+      "group": "sentinel",
+      "included_in_frozen_numerical_contract": true,
+      "included_in_overall_observable_gate": true,
+      "included_in_primary_phase_gate": false,
+      "included_in_sentinel_phase_gate": true,
+      "measured_absolute_gap_exponent": 0.8111024507749957,
+      "measured_phase_envelope_exponent": 0.500242930354084,
+      "measured_relative_gap_exponent": 0.8617744688649275,
+      "phase": "preserve",
+      "phase_envelope_error": 0.00024293035408406993,
+      "phase_envelope_local_median": 0.5007910021749986,
+      "phase_envelope_local_variation": 0.008290515196333252,
+      "phase_exponent_gate": true,
+      "phase_local_gate": true,
+      "raw_total_exponent": 0.5182189671548959,
+      "relative_gap_error": 0.11177446886492748,
+      "relative_gap_exponent_gate": false,
+      "relative_gap_local_median": 0.8579034139423286,
+      "relative_gap_local_variation": 0.05372164300385923,
+      "theory_gap_exponent": 0.75,
+      "theory_phase_exponent": 0.4999999999999999,
+      "theta": 2.5
+    }
+  },
+  "theory": {
+    "destroy_boundary": 0.25,
+    "display_only_centered_total_exponents": {
+      "2.0": 0.4999999999999999
+    },
+    "display_only_gap_exponents": {
+      "2.0": 0.75
+    },
+    "gap_exponents": {
+      "0.0": null,
+      "0.25": 0.0,
+      "0.35": 0.10000000000000009,
+      "0.5": 0.25,
+      "0.65": 0.3999999999999999,
+      "0.75": 0.5,
+      "0.9": 0.6499999999999999,
+      "1.0": 0.75,
+      "1.1": 0.75,
+      "1.5": 0.75,
+      "2.5": 0.75
+    },
+    "phase_exponents": {
+      "0.0": null,
+      "0.25": 0.0,
+      "0.35": 0.10000000000000009,
+      "0.5": 0.25,
+      "0.65": 0.3999999999999999,
+      "0.75": 0.4999999999999999,
+      "0.9": 0.4999999999999999,
+      "1.0": 0.4999999999999999,
+      "1.1": 0.4999999999999999,
+      "1.5": 0.4999999999999999,
+      "2.5": 0.4999999999999999
+    },
+    "preservation_boundary": 0.7499999999999999,
+    "q_clean": 0.4999999999999999,
+    "q_kernel": 0.75
+  }
+}

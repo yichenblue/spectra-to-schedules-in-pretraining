@@ -1,0 +1,15 @@
+{
+  "fb_volterra_three_layer_bridge.pdf": "b25fd3bc1bc237ca0a1bdb5adda30aa8bad56ab61250a12f21e13d2847126886",
+  "fixed_noise_compute_optimal_representative.pdf": "8c6dfa7105a313479404634b05eea57fa50274530e74395f8dc4c018df3e0bd2",
+  "fixed_noise_im_early_stopping_composite.pdf": "511d136ac53f62de7d641a1e990edb6e6a06cfaf4c2a165bf5c1b8ec8a09cf0c",
+  "fixed_noise_im_noise_width_stopping_dynamics.pdf": "a11ecdfd8fdbf8953dea3d1ff5fe439c8d94a3611ffcb78007e6be8336f576ca",
+  "nanogpt124m_intrinsic_time_theory_transfer.pdf": "b0fd9fae81302a717b895fd1d0301abab5257882301bb3f53506c940e33cd0f5",
+  "nanogpt124m_sgd_surrogate_fit_transfer.pdf": "d1c4ef8d21f041b0c0b1116737b81db0f00321388a19012090383a1338833f22",
+  "nanogpt30m_theta_schedule_response.pdf": "74cd250e438928a8326652238da6fe20042ad06eb5126e7f9918f92f24145431",
+  "nanogpt_factorization_collapse_sgd_muon.pdf": "3aa7c671a2e974a4235a61c0d9e518e73d7cbdfae8268c88377958b90b223869",
+  "preserve_change_destroy_continuum_diagnostic.pdf": "6968cef967bc536694053e78d92591b2cf884f2787837bd3997aac368f08aaf0",
+  "spectral_iff_rapid_target.pdf": "ce6a4f77da68caaecc0652a71eda307ad3a647a21408f2f4d63c8cd2906d497b",
+  "spectral_six_constructions_boundaries.pdf": "382b513ecce04b7dc88b66e32a9aef314ab9f147a9b82c3cd0ea7d06d600a7a6",
+  "spectral_six_constructions_powerlike.pdf": "1089e8e95f34b1ead066e76637ccae203670a5850f6746820589804a5fa4ebfa",
+  "volterra_three_layer_bridge.pdf": "019d466de226dcc66f3add664680d0caeceb86b314ba7890d22b64d20a138c66"
+}

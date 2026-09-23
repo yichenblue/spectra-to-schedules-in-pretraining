@@ -1,0 +1,22 @@
+{
+  "run_id": "spectral-width-time-full-sgd-v001",
+  "stage": "confirmation_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": true,
+  "eta": 0.05,
+  "batch_size": 16,
+  "width_power": 0.8,
+  "widths": [65536, 262144, 1048576, 4194304],
+  "max_time_over_width_power": 0.0025,
+  "max_missing_tail_fraction": 0.05,
+  "evaluation_points": 121,
+  "primary_width": 4194304,
+  "primary_fit_window": [16.0, 256.0],
+  "spectral_bins": 32768,
+  "convergence_check_bins": 16384,
+  "spectral_bin_relative_tolerance": 0.002,
+  "max_row_mass": 0.8,
+  "theory_error_tolerance": 0.08,
+  "pair_difference_tolerance": 0.05,
+  "notes": "Corrected scope: exact expected complete clean minibatch-SGD risk, including sampling-noise Volterra feedback. Geometric spectral binning is doubled at the primary width and must agree within 0.002 relative error. Width/time, fit-window, theory, pair, row-stability, and bin-convergence gates are frozen before inspecting this response."
+}

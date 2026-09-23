@@ -1,0 +1,103 @@
+{
+  "schema_version": "nanogpt300m_e2e_muon_factorization_calibration_config_v001",
+  "run_id": "nanogpt300m-e2e-muon-factorization-calibration-v001",
+  "campaign_id": "nanogpt300m-e2e-6p5b-v001",
+  "primary_prediction_id": "A2_EXTERNAL",
+  "theorem_facing": false,
+  "purpose": "short practical calibration of B/eta versus B/eta^2 trajectory matching for the current hybrid-Muon optimizer",
+  "prefix_checkpoint": {
+    "path": "prefix_checkpoint.pt",
+    "schema_version": "nanogpt300m_e2e_muon_prefix_checkpoint_v001",
+    "sha256": "06102c98743433bf2be68651d0e88573eebb943900b33b2b0b7dcae6561f8d1a",
+    "size_bytes": 2635175211,
+    "optimizer_update": 79346,
+    "tape_context_cursor": 20312576,
+    "validation_anchor_ce": 3.10438971221447
+  },
+  "source_data_sha256": {
+    "train_sha256": "aaace22370626cdbd27606f586150c6022483569ab9ab3211682e1a65d9eaa41",
+    "training_tape_file_sha256": "af0f90feac280b1f3a74015e87e7aba634b372d5ae42e1461abc4402f49537af",
+    "training_tape_offsets_sha256": "da7f193af347276ebdb4634aa84d21a90530370ea2a25149780a5abe0f60d125",
+    "validation_sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be",
+    "validation_probe_sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155"
+  },
+  "data_files": {
+    "train": {
+      "path": "inputs/pretrain_train.bin",
+      "sha256": "aaace22370626cdbd27606f586150c6022483569ab9ab3211682e1a65d9eaa41",
+      "size_bytes": 13000114688
+    },
+    "training_tape": {
+      "path": "inputs/training_tape.npy",
+      "sha256": "af0f90feac280b1f3a74015e87e7aba634b372d5ae42e1461abc4402f49537af",
+      "size_bytes": 203126912
+    },
+    "validation": {
+      "path": "inputs/pretrain_validation.bin",
+      "sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be",
+      "size_bytes": 33554432
+    },
+    "validation_probe": {
+      "path": "inputs/validation_probe.npy",
+      "sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155",
+      "size_bytes": 8320
+    }
+  },
+  "model_parameters": 303473664,
+  "block_size": 256,
+  "micro_batch_sequences": 32,
+  "future_contexts_per_arm": 524288,
+  "future_tokens_per_arm": 134217728,
+  "validation_source_stride_contexts": 8192,
+  "validation_samples_per_arm": 65,
+  "gradient_clip": 33.504,
+  "arms": {
+    "anchor_b256_eta1e4": {
+      "global_batch_sequences": 256,
+      "learning_rate": 0.0001,
+      "optimizer_updates": 2048,
+      "matched_clock": "anchor"
+    },
+    "linear_b128_eta5e5": {
+      "global_batch_sequences": 128,
+      "learning_rate": 0.00005,
+      "optimizer_updates": 4096,
+      "matched_clock": "sum_eta"
+    },
+    "square_b128_eta7p071e5": {
+      "global_batch_sequences": 128,
+      "learning_rate": 0.00007071067811865475,
+      "optimizer_updates": 4096,
+      "matched_clock": "sum_eta_squared"
+    }
+  },
+  "decision": {
+    "primary_metric": "fixed_probe_validation_ce_rmse_on_common_source_fraction_grid",
+    "linear_pair": [
+      "anchor_b256_eta1e4",
+      "linear_b128_eta5e5"
+    ],
+    "square_pair": [
+      "anchor_b256_eta1e4",
+      "square_b128_eta7p071e5"
+    ],
+    "clear_winner_ratio": 0.5,
+    "otherwise": "inconclusive"
+  },
+  "runtime": {
+    "required_gpu_name_substring": "H200",
+    "visible_gpu_count": 1,
+    "bf16_autocast": true,
+    "fp32_parameters_and_optimizer_states": true,
+    "tf32": true,
+    "flash_sdpa_only": true,
+    "torch_compile": false
+  },
+  "estimated_total_h200_hours": 0.9,
+  "hard_job_duration_seconds": 3600,
+  "launch_control": {
+    "cluster_submission_authorized": false,
+    "shared_data_reupload_required": false,
+    "prefix_checkpoint_upload_required_once": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "spectral-rapid-target-t1e3-w524288-seed31517-v001",
+  "stage": "exploratory_width_time_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "width": 524288,
+  "steps": 20000,
+  "eta": 0.05,
+  "batch_sizes": [
+    16
+  ],
+  "seeds": [
+    31517
+  ],
+  "evaluation_points": 321,
+  "tail_fit_window": [
+    100,
+    800
+  ],
+  "forcing_transform_fit_window": [
+    4,
+    64
+  ],
+  "predicted_forcing_transform_exponent": 0.5555555555555556,
+  "forcing_transform_tolerance": 0.08,
+  "spectral_band_edges": [
+    0,
+    4,
+    16,
+    64,
+    256,
+    1024,
+    4096,
+    16384,
+    65536,
+    262144,
+    524288
+  ],
+  "notes": "Literal sampled-minibatch SGD width-time extension to T=1000. The width d=524288 is the smallest calibrated power-of-two width whose exact memory local slope stays within 0.75 plus or minus 0.10 through T=1000. This is replication seed 31517 for the 20-seed Section 3 figure run."
+}

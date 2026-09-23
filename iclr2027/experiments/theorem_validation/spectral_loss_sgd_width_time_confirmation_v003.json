@@ -1,0 +1,17 @@
+{
+  "run_id": "spectral-loss-sgd-width-time-confirmation-v003",
+  "stage": "confirmation_pending_explicit_compute_authorization",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": true,
+  "eta": 0.05,
+  "batch_size": 16,
+  "width_steps": [
+    {"width": 4096, "steps": 512},
+    {"width": 16384, "steps": 1552},
+    {"width": 65536, "steps": 4704}
+  ],
+  "seeds": [31401, 31402, 31403, 31404, 31405],
+  "evaluation_points": 193,
+  "fit_intrinsic_time": [4.0, 24.0],
+  "notes": "Frozen true sampled width/time extension across all six prior constructions. Horizons scale approximately as d^0.8. Every update explicitly draws a fresh dense Gaussian minibatch and updates the full parameter vector. The common fit window is used only for across-width comparison; full local-slope curves diagnose later behavior at wider dimensions. No analytic recurrence, modal forcing, spectral binning, or expected-risk proxy is permitted. Submission requires explicit authorization."
+}

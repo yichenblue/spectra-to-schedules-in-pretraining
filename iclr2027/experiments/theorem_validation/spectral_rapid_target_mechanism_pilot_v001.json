@@ -1,0 +1,18 @@
+{
+  "run_id": "spectral-rapid-target-mechanism-pilot-v001",
+  "stage": "exploratory_mechanism_pilot",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "width": 16384,
+  "steps": 1552,
+  "eta": 0.05,
+  "batch_sizes": [16, 64, 256],
+  "seeds": [31501, 31502, 31503],
+  "evaluation_points": 193,
+  "tail_fit_window": [16.0, 64.0],
+  "forcing_transform_fit_window": [4.0, 64.0],
+  "predicted_forcing_transform_exponent": 0.5555555555555556,
+  "forcing_transform_tolerance": 0.08,
+  "spectral_band_edges": [0, 4, 16, 64, 256, 1024, 4096, 16384],
+  "notes": "Primary evidence is literal sampled minibatch-SGD at three batch sizes. The population-GD curve is a separately labeled forcing control only. The tail and forcing-transform windows, seeds, spectral bands, and gates are frozen before inspecting B=64 or B=256 responses."
+}

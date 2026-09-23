@@ -1,0 +1,48 @@
+{
+  "aggregate_results": {
+    "maximum_finite_de_relative_l2": 0.020956876245480812,
+    "maximum_true_de_relative_l2": 0.02158904155732928,
+    "maximum_true_finite_relative_l2": 0.018461070149958642
+  },
+  "artifacts": {
+    "curves": "SOURCE_SNAPSHOT/curves.csv",
+    "metrics": "SOURCE_SNAPSHOT/metrics.csv",
+    "paper_pdf": "SOURCE_SNAPSHOT/volterra_three_layer_bridge.pdf",
+    "pdf": "SOURCE_SNAPSHOT/experiment0c_three_layer_bridge_paper.pdf",
+    "png": "SOURCE_SNAPSHOT/experiment0c_three_layer_bridge_paper.png"
+  },
+  "claim_scope": "finite-width numerical three-layer bridge on the audited schedules and time windows; not a uniform random-matrix theorem",
+  "experiment": "experiment_0c_three_layer_bridge",
+  "gates": {
+    "maximum_finite_de_relative_l2": 0.04,
+    "maximum_true_de_relative_l2": 0.05,
+    "maximum_true_finite_relative_l2": 0.04,
+    "three_layer_gate_pass": true
+  },
+  "paper_modified": false,
+  "purpose": "place true-SGD mean, exact same-W conditional Volterra, and the resolvent deterministic-equivalent Volterra in one audited figure",
+  "same_object_contract": {
+    "ambient_to_width_ratio": 2,
+    "contract_checks": {
+      "ambient_to_width_ratio": true,
+      "de_bridge_pass": true,
+      "eta": true,
+      "initial_batch": true,
+      "sigma2": true,
+      "source_bridge_pass": true,
+      "width": true
+    },
+    "experiment_0_curves_sha256": "73368961e7123ca219a4af849177f39895d2c9f065849435ac5b2af63384878b",
+    "experiment_0b_curves_sha256": "daef9be0dd2e9a4d73161c2dd070b38f4a002385aadb7ce3224c29478b363faf",
+    "feature_seeds_for_true_and_finite_w": [
+      11,
+      23
+    ],
+    "schedule": "B_t=ceil(16*(1+eta*t)^theta)",
+    "sigma2": 25.0,
+    "time": "T_t=eta*t",
+    "true_and_finite_aggregation": "arithmetic mean over identical W",
+    "width": 512
+  },
+  "workflow_promoted": false
+}

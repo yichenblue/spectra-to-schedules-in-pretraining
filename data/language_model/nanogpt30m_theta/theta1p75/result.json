@@ -1,0 +1,117 @@
+{
+  "artifacts": {
+    "training_trace": {
+      "path": "training_trace.npz",
+      "sha256": "8c87db5544409dc0d20d2e3631dc62310ab36e4c56ed31853b6814ea71a6230a",
+      "size_bytes": 27584145
+    },
+    "validation_evaluations": {
+      "path": "validation_evaluations.npz",
+      "sha256": "2e03ccb983c9bb1dd603227360ed7971d31c52ba3dc4f531c707a533dfa232d5",
+      "size_bytes": 1418850
+    }
+  },
+  "campaign_id": "nanogpt30m-e2e-sgd-theta-powerlaw-v001",
+  "config_sha256": "39c2826bf491a59a248b1eff9c8e00745831a78743056e19b34813b80c051371",
+  "contains_prediction_response": true,
+  "counts": {
+    "prefix_tokens": 402653184,
+    "prefix_updates": 196608,
+    "tail_tokens": 1307054080,
+    "tail_updates": 638210,
+    "total_tokens": 1709707264,
+    "total_updates": 834818,
+    "validation_contexts_per_evaluation": 1024,
+    "validation_evaluations": 410
+  },
+  "data": {
+    "train": {
+      "bytes": 10000015872,
+      "path": "SOURCE_SNAPSHOT/pretrain_train.bin",
+      "sha256": "b5b3bf08ae0ffecdeda46c28273af995d4c5af6934090eb9904f51bf6c17f84b",
+      "token_count": 5000007936
+    },
+    "validation": {
+      "bytes": 33554432,
+      "path": "SOURCE_SNAPSHOT/pretrain_validation.bin",
+      "sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be",
+      "token_count": 16777216
+    },
+    "validation_probe": {
+      "context_count": 1024,
+      "dtype": "int64",
+      "offsets_sha256": "7de9d6fe09394faafd78af662c0dacbb49b7bb663c1965ce8adef9d0e3ef3247",
+      "path": "SOURCE_SNAPSHOT/validation_probe.npy",
+      "sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155",
+      "unique_offsets": 1024
+    }
+  },
+  "data_identity_sha256": "e926b419e4769b9b36b7a7e5fe958dbc8f2c668f63a319e4700ca261fbfc5072",
+  "failure": null,
+  "future_tape_sha256": "d9e42b4efe5b8c7ed37334b13d1fd389ded91e13cc31ab807adf8d84e5ada4a0",
+  "gpu_submission_performed": false,
+  "model": {
+    "bias": false,
+    "block_size": 256,
+    "dropout": 0.0,
+    "expected_parameter_count": 30036864,
+    "family": "nanogpt",
+    "n_embd": 384,
+    "n_head": 6,
+    "n_layer": 6,
+    "vocab_size": 50304
+  },
+  "optimizer": {
+    "batch_size": 8,
+    "dampening": 0.0,
+    "foreach": false,
+    "gradient_clip": 0.0,
+    "learning_rate_base": 0.005941406469904266,
+    "momentum": 0.0,
+    "name": "sgd",
+    "nesterov": false,
+    "state_entries": 0,
+    "weight_decay": 0.0
+  },
+  "phase": "tail",
+  "prefix_checkpoint_sha256": "c6c1b15ab37c3096843eac1481ba0f6b7875c9c79fd8ad566ce7cbbe0cf1e119",
+  "prefix_state_sha256": "53ba7f6928e2dcb5690b2b2e11208ffb86f44fd49202118c0c21da77811a305d",
+  "prefix_tape_sha256": "7b3ffc9460b40f06e4efa6219ec460dbf215e383e05e5078fd2d5bf524d5be73",
+  "resource": {
+    "budget_passed": true,
+    "elapsed_seconds": 18818.04864083603,
+    "gpu_hours": 5.227235733565564,
+    "maximum_gpu_hours": 10.5,
+    "maximum_wall_seconds": 37800.0
+  },
+  "run_id": "nanogpt30m-e2e-sgd-theta-powerlaw-v001",
+  "runtime": {
+    "device": "cuda",
+    "device_name": "NVIDIA A100-SXM4-80GB",
+    "dtype": "float32",
+    "elapsed_seconds": 18818.04864083603,
+    "gpu_hours": 5.227235733565564,
+    "numpy": "2.5.1",
+    "peak_memory_bytes": 3617201664,
+    "platform": "Linux-5.14.0-620.el9.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu126"
+  },
+  "schedule_manifest_sha256": "40de1855b9bfb98e58ad46ed82244143713737b744c7d1ed41f967781530e57c",
+  "schema_version": "nanogpt30m_e2e_sgd_theta_powerlaw_result_v001",
+  "scope": {
+    "evidence_class": "A2_EXTERNAL",
+    "prediction_id": "A2_EXTERNAL",
+    "theorem_facing": false
+  },
+  "status": "completed",
+  "terminal_schedule_coordinate_x": 15.0,
+  "terminal_state_sha256": "753cca4c10d75259596539b2b01013542fbb7488d206852d419ad19f4bc8de12",
+  "terminal_tail_intrinsic_time": 85.17600315254757,
+  "theta": 1.75,
+  "training_tape_sha256": "2f240b20cf523abdc50f9143bfd3b374226d82db0e5f93124bd268e6a9b55dab",
+  "used_future_tape_sha256": "be4caebca22c2cdcc23106a40c27427a7af389b0143afd174c0682b16ff57f4e",
+  "validation_anchor_sha256": "bcc8b3e336280ce56a3fe5ba8da364d67613b5443f74fe65f4f0a3a75fda6445",
+  "validation_probe_offsets_sha256": "7de9d6fe09394faafd78af662c0dacbb49b7bb663c1965ce8adef9d0e3ef3247",
+  "validation_probe_sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155"
+}

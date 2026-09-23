@@ -1,0 +1,80 @@
+{
+  "schema_version": "nanogpt300m_e2e_muon_prefix_config_v001",
+  "run_id": "nanogpt300m-e2e-muon-prefix-v001",
+  "campaign_id": "nanogpt300m-e2e-6p5b-v001",
+  "primary_prediction_id": "A2_EXTERNAL",
+  "theorem_facing": false,
+  "phase": "shared_constant_r_prefix",
+  "plan_path": "experiments/configs/nanogpt300m_e2e_6p5b_v001.json",
+  "source_data_sha256": {
+    "train_sha256": "aaace22370626cdbd27606f586150c6022483569ab9ab3211682e1a65d9eaa41",
+    "training_tape_file_sha256": "af0f90feac280b1f3a74015e87e7aba634b372d5ae42e1461abc4402f49537af",
+    "training_tape_offsets_sha256": "da7f193af347276ebdb4634aa84d21a90530370ea2a25149780a5abe0f60d125",
+    "validation_sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be",
+    "validation_probe_sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155"
+  },
+  "data_files": {
+    "train": {"path": "inputs/pretrain_train.bin", "sha256": "aaace22370626cdbd27606f586150c6022483569ab9ab3211682e1a65d9eaa41", "size_bytes": 13000114688},
+    "training_tape": {"path": "inputs/training_tape.npy", "sha256": "af0f90feac280b1f3a74015e87e7aba634b372d5ae42e1461abc4402f49537af", "size_bytes": 203126912},
+    "validation": {"path": "inputs/pretrain_validation.bin", "sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be", "size_bytes": 33554432},
+    "validation_probe": {"path": "inputs/validation_probe.npy", "sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155", "size_bytes": 8320}
+  },
+  "model_parameters": 303473664,
+  "initialization_seed": 2026091502,
+  "block_size": 256,
+  "global_batch_sequences": 256,
+  "micro_batch_sequences": 32,
+  "prefix_updates": 79346,
+  "prefix_tokens": 5200019456,
+  "optimizer": {
+    "name": "hybrid_muon",
+    "nominal_learning_rate": 0.0001,
+    "warmup_updates": 256,
+    "gradient_clip": 33.504,
+    "muon_momentum": 0.95,
+    "muon_nesterov": true,
+    "muon_ns_steps": 5,
+    "muon_eps": 1e-7,
+    "muon_adjust_lr_fn": "match_rms_adamw",
+    "muon_weight_decay": 0.1,
+    "aux_adamw_betas": [0.9, 0.999],
+    "aux_adamw_eps": 1e-8,
+    "aux_adamw_weight_decay": 0.1,
+    "aux_adamw_fused": true
+  },
+  "runtime": {
+    "required_gpu_name_substring": "H200",
+    "visible_gpu_count": 1,
+    "bf16_autocast": true,
+    "fp32_parameters_and_optimizer_states": true,
+    "tf32": true,
+    "flash_sdpa_only": true,
+    "torch_compile": false,
+    "validation_batch_sequences": 32
+  },
+  "validation": {
+    "fixed_probe_contexts": 1024,
+    "sample_count": 6000,
+    "tail_regular_stride_macros": 1,
+    "near_fork_window_updates": 4096,
+    "near_fork_every_update": true,
+    "initialization_and_fork_included": true
+  },
+  "calibration_provenance": {
+    "b0_job_id": "6202317.0",
+    "b0_result_sha256": "f8f51ee82c4f1272cf8c3f989fa5a4fcb4916cf230fc516b999f5aa4baf825f2",
+    "b0_fixed_probe_evaluation_seconds": 0.4698373582214117,
+    "v002_low_job_id": "6209720.0",
+    "v002_low_result_sha256": "b4c87bb2b079f309e32fabec840af4fc90c7094a244d5f06d38dba20460385ef",
+    "v002_high_job_id": "6209721.0",
+    "v002_high_result_sha256": "ddfb927d1776d6b2e60ee8340bee5bc0d7861e74faee0bbb01b9dee37bb6bd67",
+    "v002_high_last_four_validation_ce": 3.6072455644607544,
+    "v002_low_last_four_validation_ce": 3.674183825030923,
+    "selected_setting_status": "provisional_lr_and_nearly_nonclipping_control"
+  },
+  "estimated_training_gpu_hours": 8.21,
+  "estimated_validation_gpu_hours": 0.783,
+  "estimated_total_gpu_hours_before_transfer_and_checkpoint": 8.993,
+  "hard_job_duration_seconds": 43200,
+  "launch_control": {"cluster_submission_authorized": false, "shared_data_uploaded": false}
+}

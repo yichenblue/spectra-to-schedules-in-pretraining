@@ -1,0 +1,86 @@
+{
+  "displayed_m_values": [
+    10,
+    30,
+    75,
+    200,
+    600,
+    1600,
+    4800,
+    12800,
+    25600,
+    51200
+  ],
+  "experiment": "representative_FB2_IM1_centered_frontier_overlays",
+  "font_scale_relative_to_previous_version": 1.3333333333333333,
+  "frontier_definition": "pointwise discrete minimum over the full accepted width sweep, subject to m <= flops/B with B=1",
+  "frontier_display_smoothing": "log-space Savitzky-Golay(window=31, polyorder=3); raw frontier retained",
+  "frontier_m_values": [
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    200,
+    300,
+    400,
+    600,
+    800,
+    1200,
+    1600,
+    2400,
+    3200,
+    4800,
+    6400,
+    9600,
+    12800,
+    19200,
+    25600,
+    38400,
+    51200
+  ],
+  "matched_canvas_dpi": 260,
+  "matched_canvas_inches": [
+    12.0,
+    7.4
+  ],
+  "outputs": {
+    "FB2": {
+      "alpha": 0.12,
+      "beta": 0.65,
+      "displayed_frontier_flops_interval": [
+        1000000.0,
+        10000000000.0
+      ],
+      "frontier_csv": "artifacts/results/representative_FB2_frontiers.csv",
+      "legacy_data_phase": "Ic",
+      "pdf": "artifacts/plots/representative_FB2_centered_sigma2_0_vs_1_frontier.pdf",
+      "png": "artifacts/plots/representative_FB2_centered_sigma2_0_vs_1_frontier.png",
+      "show_colorbars": false
+    },
+    "IM1": {
+      "alpha": 0.7,
+      "beta": 0.3,
+      "displayed_frontier_flops_interval": [
+        10000.0,
+        1000000000.0
+      ],
+      "frontier_csv": "artifacts/results/representative_IM1_frontiers.csv",
+      "legacy_data_phase": "Ia",
+      "pdf": "artifacts/plots/representative_IM1_centered_sigma2_0_vs_1_frontier.pdf",
+      "png": "artifacts/plots/representative_IM1_centered_sigma2_0_vs_1_frontier.png",
+      "show_colorbars": true
+    }
+  },
+  "risk": "R_sigma(t,m) - P_sigma^star",
+  "sigma2_values": [
+    0.0,
+    1.0
+  ],
+  "solver": "support-adaptive zero-regularization deterministic-equivalent Volterra",
+  "status": "COMPLETE"
+}

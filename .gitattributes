@@ -1,0 +1,14 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+*.csv text eol=lf
+*.npz binary
+*.pdf binary
+*.png binary
+
+# Large frozen numeric tables are data artifacts, not useful line diffs.
+fixed_noise_validation/**/*.csv -diff
+data/**/*.csv -diff
+iclr2027/**/artifacts/**/*.csv -diff

@@ -1,0 +1,15 @@
+{
+  "run_id": "spectral-polynomial-small-width-extension-v001",
+  "stage": "exploratory_small_width_time_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "cases": ["polynomial_canonical", "polynomial_sparse_target"],
+  "widths": [4096, 16384],
+  "steps": 4704,
+  "eta": 0.05,
+  "batch_size": 16,
+  "seeds": [31401, 31402, 31403, 31404, 31405],
+  "evaluation_points": 193,
+  "workers": 5,
+  "notes": "Extends only the two polynomial constructions at d=4096 and d=16384 to the existing d=65536 horizon T=235.2. Uses the same eta, batch size, and five seeds as spectral-loss-sgd-width-time-confirmation-v003. Every update is literal fresh dense Gaussian minibatch SGD on the complete vector; no recurrence, binning, or proxy is used."
+}

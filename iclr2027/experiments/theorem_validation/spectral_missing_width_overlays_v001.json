@@ -1,0 +1,26 @@
+{
+  "run_id": "spectral-missing-width-overlays-v001",
+  "stage": "exploratory_width_overlay_extension",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "workers": 5,
+  "stretched": {
+    "widths": [256, 512],
+    "eta": 0.05,
+    "batch_size": 16,
+    "steps": 20000000,
+    "seeds": [31601, 31602, 31603, 31604, 31605],
+    "evaluation_points": 4097,
+    "checkpoint_interval": 1000000
+  },
+  "geometric": {
+    "widths": [16, 64],
+    "spacing": 1.4,
+    "eta": 0.05,
+    "batch_size": 16,
+    "steps": 100000,
+    "seeds": [31701, 31702, 31703, 31704, 31705],
+    "evaluation_points": 2049
+  },
+  "notes": "Adds only widths absent from the six-panel summary. All trajectories use literal fresh dense Gaussian minibatches and explicit full-vector SGD. Stretched widths d=256,512 run to T=1e6 and are compared with the completed d=2048 run. Geometric spacing a=1.4 widths d=16,64 run to T=5000 and are compared with the completed d=2048 run. No recurrence, binning, or proxy training is used."
+}

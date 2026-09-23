@@ -1,0 +1,86 @@
+{
+  "schema_version": "nanogpt30m_e2e_sgd_theta_powerlaw_config_v001",
+  "run_id": "nanogpt30m-e2e-sgd-theta-powerlaw-v001",
+  "stage": "pilot_intrinsic_time_ratio_exponent",
+  "primary_prediction_id": "A2_EXTERNAL",
+  "launch_control": {
+    "cluster_submission_authorized": false,
+    "runner_has_no_submission_capability": true
+  },
+  "scientific_scope": {
+    "theorem_facing": false,
+    "evidence_class": "A2_EXTERNAL"
+  },
+  "data": {
+    "train": {
+      "path": "data/openwebtext-cooldown-2p5b-v001/pretrain_train.bin",
+      "sha256": "d718aa14fa180720cf27afe9457b9c2c0b9cc4bed3fbe4839de98b167dc61668",
+      "size_bytes": 5000000512,
+      "token_count": 2500000256,
+      "dtype": "uint16"
+    },
+    "validation": {
+      "path": "data/openwebtext-cooldown-2p5b-v001/pretrain_validation.bin",
+      "sha256": "52085210f2da47797efd93401d8b890c6efdb41055c266d499649e1d82ee20be",
+      "size_bytes": 33554432,
+      "token_count": 16777216,
+      "dtype": "uint16"
+    },
+    "validation_probe": {
+      "path": "data/openwebtext-cooldown-2p5b-v001/validation_probe.npy",
+      "sha256": "0295b25ce763f30570d4a268491d5a829e244ade33c602c32423e66aea278155",
+      "context_count": 1024,
+      "dtype": "int64"
+    }
+  },
+  "model": {
+    "family": "nanogpt",
+    "expected_parameter_count": 30036864,
+    "block_size": 256,
+    "vocab_size": 50304,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 384,
+    "dropout": 0.0,
+    "bias": false
+  },
+  "optimizer": {
+    "name": "sgd",
+    "learning_rate": 0.005941406469904266,
+    "momentum": 0.0,
+    "dampening": 0.0,
+    "nesterov": false,
+    "weight_decay": 0.0,
+    "gradient_clip": 0.0,
+    "foreach": false
+  },
+  "design": {
+    "batch_size": 8,
+    "aligned_stride": 256,
+    "prefix_updates": 196608,
+    "theta_grid": [0.125, 0.25, 0.375],
+    "tau_scale_updates": 1024,
+    "terminal_x": 15.0,
+    "evaluation_x_count": 410,
+    "training_tape_seed": 2026090802,
+    "initialization_seed": 2026090801,
+    "validation_batch_size": 32
+  },
+  "runtime": {
+    "training_device": "cuda",
+    "preflight_device": "cpu",
+    "dtype": "float32",
+    "amp": false,
+    "tf32": false,
+    "compile": false,
+    "deterministic": true,
+    "maximum_wall_seconds": 2700,
+    "maximum_gpu_hours": 0.75
+  },
+  "artifacts": {
+    "result": "result.json",
+    "training_trace": "training_trace.npz",
+    "validation_evaluations": "validation_evaluations.npz",
+    "prefix_checkpoint": "prefix_checkpoint.pt"
+  }
+}

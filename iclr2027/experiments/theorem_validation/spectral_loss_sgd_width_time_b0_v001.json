@@ -1,0 +1,16 @@
+{
+  "run_id": "spectral-loss-sgd-width-time-b0-v001",
+  "stage": "b0_implementation_non_claim_bearing",
+  "primary_prediction_id": "P2_PHASE",
+  "claim_bearing": false,
+  "eta": 0.05,
+  "batch_size": 16,
+  "width_steps": [
+    {"width": 256, "steps": 96},
+    {"width": 1024, "steps": 192}
+  ],
+  "seeds": [31301, 31302],
+  "evaluation_points": 49,
+  "fit_intrinsic_time": [0.5, 4.0],
+  "notes": "Implementation B0 only. All six cases draw fresh dense Gaussian minibatches and execute explicit full-vector plain-SGD updates. No recurrence, expectation surrogate, or spectral binning is allowed. This B0 cannot support a scaling claim."
+}
