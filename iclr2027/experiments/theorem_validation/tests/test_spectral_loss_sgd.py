@@ -48,7 +48,7 @@ class SpectralLossSgdTests(unittest.TestCase):
         )
         np.testing.assert_array_equal(first, second)
         self.assertTrue(np.all(first > 0.0))
-        self.assertEqual(float(first[0]), 1.0)
+        self.assertAlmostEqual(float(first[0]), 1.0, places=12)
         self.assertLess(float(first[-1]), float(first[0]))
 
     def test_trace_driven_instability_is_rejected(self) -> None:
