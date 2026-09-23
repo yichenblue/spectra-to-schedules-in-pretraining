@@ -73,4 +73,3 @@ The language-model claims are single-seed and externally scoped exactly as recor
 - Choose and add a `LICENSE` file. No license was inferred on the author's behalf.
 - Replace this repository title with the final paper title if desired.
 - Add the final anonymous or camera-ready citation metadata after the submission status is known.
-- Create the GitHub repository and push this directory; no remote repository is configured here.
