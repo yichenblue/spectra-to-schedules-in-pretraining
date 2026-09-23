@@ -1,4 +1,14 @@
-# Paper experiment code
+# From Spectra to Joint Schedules: 3+3(+2) Scaling-Law Regimes
+
+![A forcing--memory surrogate fit for 124M nanoGPT and the 3+3(+2) propagation map](assets/hero_figure.png)
+
+*A forcing--memory surrogate fits 124M nanoGPT loss across schedules and locates its effective response near the $q_{\mathcal K}\approx 1$ boundary of the $3+3(+2)$ propagation map.*
+
+## Abstract
+
+Power-law learning curves are often treated as fixed properties of a model and its data, even though changing the learning-rate or batch-size schedule can change the observed curve. We study this dependence in noisy online stochastic gradient descent with frozen random features. Conditional on the representation, an exact Volterra equation separates two mechanisms: a forcing term propagates unresolved target error, while a memory kernel describes how long one stochastic injection survives. We prove that either component follows a power law if and only if its cumulative weighted spectral mass has the corresponding low-spectrum scaling; neither individual eigenvalues nor target coefficients need obey a coordinatewise power law. Under a joint schedule, intrinsic time controls optimization progress and the batch-size-to-learning-rate ratio $B/\eta$ controls noise injection. Their interaction determines how accumulated label noise decays. Comparing this decay with the clean loss shows when a schedule preserves, changes, or destroys the clean power law, and reveals a memory-imposed ceiling on how quickly the noisy--clean gap can vanish. The power-law random-feature model instantiates this mechanism in $3+3(+2)$ propagation regimes and yields phase-dependent data and feature-compute rates. To test whether the same schedule mechanism remains useful beyond the proxy model, we conduct LLM experiments showing that (1) learning-rate and batch-size schedules with matched $B/\eta$ paths are nearly equivalent in intrinsic time, (2) a forcing--memory surrogate accurately fits loss across schedules, and (3) its fitted exponents identify the LLM's effective source-capacity condition.
+
+## Repository contents
 
 This repository is the reproducibility package for every experiment figure in the current manuscript. It contains the experiment implementations, frozen configurations, validation traces used by the plots, cluster launch material, paper-ready plotting code, and the 13 exact PDF figures included by the manuscript.
 
