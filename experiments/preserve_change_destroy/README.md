@@ -74,15 +74,15 @@ Run all tests from the repository root:
 Run the three-layer finite-width diagnostic used in the paper appendix:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-exp0-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-exp0-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.run_experiment_0_finite_rf_sgd_bridge
 
-MPLCONFIGDIR=/private/tmp/paper-experiments-exp0b-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-exp0b-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.run_experiment_0b_finite_w_de_bridge
 
-MPLCONFIGDIR=/private/tmp/paper-experiments-exp0c-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-exp0c-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.plot_experiment_0c_three_layer_bridge
 ```
@@ -100,7 +100,7 @@ needed at runtime.
 Run the separate finite-bulk three-layer bridge:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-fb-bridge-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-fb-bridge-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.run_fb_three_layer_bridge \
   --profile full
@@ -120,7 +120,7 @@ Plot the independently reviewed LM/IM schedule-response diagnostic:
 
 ```sh
 MPLBACKEND=Agg \
-MPLCONFIGDIR=/private/tmp/paper-experiments-schedule-response-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-schedule-response-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.plot_cutoff_repaired_schedule_response
 ```
@@ -138,7 +138,7 @@ paper-facing figure inputs live under
 Run the fast end-to-end profile:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run \
   --profile smoke
 ```
@@ -146,7 +146,7 @@ MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-mpl \
 Run the preregistered main sweep explicitly:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run \
   --profile main
 ```
@@ -154,11 +154,11 @@ MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-mpl \
 Run the scalable head-preserving spectral-quadrature backend:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-de-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-de-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run_de \
   --profile smoke
 
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-de-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-de-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run_de \
   --profile main
 ```
@@ -166,15 +166,15 @@ MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-de-mpl \
 Run the matched-spectrum authenticity bridge:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-bridge-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-bridge-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run_bridge \
   --profile smoke
 
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-bridge-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-bridge-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run_bridge \
   --profile main
 
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-bridge-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-bridge-mpl \
 ./.venv/bin/python -m experiments.preserve_change_destroy.run_bridge \
   --profile large
 ```
@@ -182,7 +182,7 @@ MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-bridge-mpl \
 Run the full eight-schedule experiment-one diagnostic at `m=10000`:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-exp1-m10000-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-exp1-m10000-mpl \
 ./.venv/bin/python \
   -m experiments.preserve_change_destroy.run_experiment_one_m10000
 ```
@@ -190,7 +190,7 @@ MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-exp1-m10000-mpl \
 Run the locked finite-width validation and fixed-equation extrapolation:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-finite-size-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-finite-size-mpl \
 ./.venv/bin/python \
   -m experiments.preserve_change_destroy.run_finite_size_experiment_one
 ```
@@ -207,7 +207,7 @@ show finite-size drift but cannot pass the theory audit.
 Run the preregistered label-noise crossover sweep:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-noise-sweep-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-noise-sweep-mpl \
 ./.venv/bin/python \
   -m experiments.preserve_change_destroy.run_noise_sweep
 ```
@@ -225,7 +225,7 @@ Generate the post-sweep exploratory experiment-one phase plot at
 `m=10000, sigma2=100`:
 
 ```sh
-MPLCONFIGDIR=/private/tmp/paper-experiments-pcd-exp1-sigma100-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-pcd-exp1-sigma100-mpl \
 ./.venv/bin/python \
   -m experiments.preserve_change_destroy.run_experiment_one_sigma100
 ```

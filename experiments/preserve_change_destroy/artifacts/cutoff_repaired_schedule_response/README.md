@@ -24,7 +24,7 @@ Regenerate the paper-facing figure from the repository root with:
 
 ```sh
 MPLBACKEND=Agg \
-MPLCONFIGDIR=/private/tmp/paper-experiments-schedule-response-mpl \
+MPLCONFIGDIR=/private/tmp/spectra-joint-schedules-schedule-response-mpl \
 ./.venv/bin/python -m \
   experiments.preserve_change_destroy.plot_cutoff_repaired_schedule_response
 ```
