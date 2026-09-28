@@ -11,4 +11,4 @@
 # Large frozen numeric tables are data artifacts, not useful line diffs.
 fixed_noise_validation/**/*.csv -diff
 data/**/*.csv -diff
-iclr2027/**/artifacts/**/*.csv -diff
+experiments/**/artifacts/**/*.csv -diff

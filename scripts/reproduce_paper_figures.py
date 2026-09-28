@@ -29,9 +29,9 @@ def run(*arguments: str, cwd: Path | None = None) -> None:
 
 
 def reproduce_spectral() -> None:
-    package = ROOT / "iclr2027" / "experiments" / "theorem_validation"
-    run("-m", "iclr2027.experiments.theorem_validation.spectral_six_construction_paper_style")
-    run("-m", "iclr2027.experiments.theorem_validation.spectral_rapid_target_triptych")
+    package = ROOT / "experiments" / "theorem_validation"
+    run("-m", "experiments.theorem_validation.spectral_six_construction_paper_style")
+    run("-m", "experiments.theorem_validation.spectral_rapid_target_triptych")
     six = package / "artifacts" / "spectral_six_construction_paper_style_v002"
     rapid = package / "artifacts" / "spectral_rapid_target_triptych_v009"
     shutil.copy2(
@@ -49,7 +49,7 @@ def reproduce_spectral() -> None:
 
 
 def reproduce_preserve_change_destroy() -> None:
-    artifacts = ROOT / "iclr2027" / "experiments" / "preserve_change_destroy" / "artifacts"
+    artifacts = ROOT / "experiments" / "preserve_change_destroy" / "artifacts"
     run(str(ROOT / "scripts" / "plot_preserve_change_destroy_cached.py"))
     sources = {
         "volterra_three_layer_bridge.pdf": (
@@ -68,7 +68,7 @@ def reproduce_preserve_change_destroy() -> None:
 
 
 def reproduce_fixed_noise() -> None:
-    package = ROOT / "iclr2027" / "experiments" / "fixed_noise_early_stopping"
+    package = ROOT / "experiments" / "fixed_noise_early_stopping"
     run("plot_im_early_stopping_composite.py", cwd=package)
     run("plot_im_noise_width_stopping_dynamics.py", cwd=package)
     source = ROOT / "fixed_noise_validation" / "src"

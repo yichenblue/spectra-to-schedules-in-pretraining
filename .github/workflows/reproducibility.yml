@@ -21,9 +21,9 @@ jobs:
       - name: Compile source
         run: python -m compileall -q .
       - name: Run spectral tests
-        run: python -m unittest discover -s iclr2027/experiments/theorem_validation/tests -v
+        run: python -m unittest discover -s experiments/theorem_validation/tests -v
       - name: Run random-feature and bridge tests
-        run: python -m unittest discover -s iclr2027/experiments/preserve_change_destroy/tests -v
+        run: python -m unittest discover -s experiments/preserve_change_destroy/tests -v
       - name: Reproduce paper figures
         run: python scripts/reproduce_paper_figures.py
       - name: Check reproduced figure count

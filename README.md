@@ -14,9 +14,9 @@ This repository is the reproducibility package for every experiment figure in th
 
 The release is organized by experiment family:
 
-- `iclr2027/experiments/theorem_validation/`: spectral constructions and the rapid-target diagnostic.
-- `iclr2027/experiments/preserve_change_destroy/`: preserve/change/destroy and finite-width Volterra bridge experiments.
-- `iclr2027/experiments/fixed_noise_early_stopping/`: finite-width noisy early stopping.
+- `experiments/theorem_validation/`: spectral constructions and the rapid-target diagnostic.
+- `experiments/preserve_change_destroy/`: preserve/change/destroy and finite-width Volterra bridge experiments.
+- `experiments/fixed_noise_early_stopping/`: finite-width noisy early stopping.
 - `fixed_noise_validation/`: accepted deterministic-equivalent Volterra source curves used by the noisy plots.
 - `experiments/nanogpt_local/`: 30M/124M/300M nanoGPT training, schedule, optimizer, validation, and fitting code.
 - `experiments/configs/`, `experiments/protocols/`, `experiments/chtc/`: frozen language-model configurations, protocols, and HTCondor materializers.
@@ -45,7 +45,7 @@ The reproduction script writes to `reproduced_figures/`. A single family can be 
 .venv/bin/python scripts/reproduce_paper_figures.py --group language-model
 ```
 
-The `preserve` group materializes the audited paper PDFs bundled with the accepted numerical outputs. The full numerical runs that produced them are exposed as the corresponding `run_*.py` entry points in `iclr2027/experiments/preserve_change_destroy/`; these runs are substantially more expensive than redrawing a figure.
+The `preserve` group materializes the audited paper PDFs bundled with the accepted numerical outputs. The full numerical runs that produced them are exposed as the corresponding `run_*.py` entry points in `experiments/preserve_change_destroy/`; these runs are substantially more expensive than redrawing a figure.
 
 ## Language-model reruns
 
@@ -74,7 +74,7 @@ The same checks and a full figure redraw are configured in `.github/workflows/re
 
 ## Scope and provenance
 
-The map follows the figures included by the current `iclr2027/main.tex`, not every historical experiment in the larger research workspace. Derived CSV/NPZ files are frozen snapshots of the accepted runs. Configuration hashes and numerical gates remain in the source summaries; local absolute paths have been replaced by publication-safe snapshot labels.
+The map follows the figures included by the current manuscript source, not every historical experiment in the larger research workspace. Derived CSV/NPZ files are frozen snapshots of the accepted runs. Configuration hashes and numerical gates remain in the source summaries; local absolute paths have been replaced by publication-safe snapshot labels.
 
 The language-model claims are single-seed and externally scoped exactly as recorded in the protocols and summaries. The 124M surrogate is fitted on the fixed-batch 8-1-1 trajectory and transferred without refitting to the other schedule/factorization trajectories.
 

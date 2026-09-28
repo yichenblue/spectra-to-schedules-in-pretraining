@@ -8,7 +8,7 @@ from pathlib import Path
 
 import numpy as np
 
-from iclr2027.experiments.preserve_change_destroy import (
+from experiments.preserve_change_destroy import (
     run_exact_power_continuum_m100000 as experiment,
 )
 
@@ -16,7 +16,6 @@ from iclr2027.experiments.preserve_change_destroy import (
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = (
     ROOT
-    / "iclr2027"
     / "experiments"
     / "preserve_change_destroy"
     / "artifacts"
